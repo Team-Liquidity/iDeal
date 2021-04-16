@@ -9,7 +9,7 @@ function Product(name , phoneNumber , description , price) {
 
 Product.productArr = [];
 let btn = document.getElementById('add-products');
-btn.addEventListener('submit' , addProduct) ;
+btn.addEventListener('submit' , addProduct);
 
 function addProduct(event) {
     event.preventDefault();
