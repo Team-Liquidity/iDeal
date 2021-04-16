@@ -13,22 +13,60 @@ for (let i = 0; i < addButton.length; i++) {
     addButton[i].addEventListener('click', addToCart);
 
     function addToCart(event) {
-        let img = document.getElementById('p-' + i);
+        let img = document.getElementById('p-' + i).getAttribute('src');
+        console.log(img);
         pictArr.push(img);
         console.log(pictArr);
         let getQuantity = document.getElementsByClassName('quantity')[i].value;
         let getPrice = price[i].getAttribute('value');
-        counter+=parseInt(getQuantity);
+        counter += parseInt(getQuantity);
         let total = document.getElementsByClassName('total')[0];
         total.textContent = counter;
-        totalPrice+=getQuantity*getPrice;
-        console.log(getQuantity);
+        totalPrice += getQuantity * getPrice;
+        updateStorage();
+        console.log(pictArr);
+        /*console.log(getQuantity);
         console.log(getPrice);
-        console.log(totalPrice);
+        console.log(totalPrice);*/
+    }
 
-        
+}
+//################################################################
+function updateStorage() {
+    let arrString;
+    // for (let i = 0; i < pictArr.length; i++) {
+
+        arrString = JSON.stringify(pictArr);
+        localStorage.setItem('products', arrString)
+    // }
+
+}
+//###############################################################    
+function getProducts() {
+    let data = localStorage.getItem('products');
+    let productsdata = JSON.parse(data);
+    if (productsdata !== null) {
+        pictArr = productsdata;
+
+    }
+    return productsdata;
+
+}
+//let productsdata=getProducts();
+//getProducts();
+//console.log(productsdata);
+//################################################################
+
+function cartRendering() {
+    let productsEl = document.getElementById('cart');
+    for(let i = 0 ; i < pictArr.length ; i++) {
+        let imagelement = document.createElement('img');
+        productsEl.appendChild(imagelement);
+        imagelement.setAttribute('src' , pictArr[i]);
     }
 }
+getProducts();
+cartRendering();
 
 // let buttonCart = document.getElementById('moveToCart');
 
