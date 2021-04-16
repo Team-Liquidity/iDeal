@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+ nav {
+     display: inline-block;
+ }
+ nav ul li {
+     display: inline-block;
+     padding: 15px;
+ }
+ nav ul li a{
+     display: inline-block;
+     float: right;
+ }
+ header{
+    background-color: lightgray;
+    height: 53px;
+ }
+ .logo {
+     display: inline-block;
+ }
+ ul {
+     float: right;
+ }
+ #cart  {
+     display: inline-block;
+    
+ }
+ #cart ul li {
+float: right;
+ }
+
+ a{
+     text-decoration: none;
+     color:#ff4477;
+ }
