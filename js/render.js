@@ -1,8 +1,10 @@
 'use strict'
-
+export function render (){
 let newSales = localStorage.getItem('Product Object');
 let objNewSales = JSON.parse(newSales);
 let parentContainer = document.getElementById('new-container');
+console.log(newSales[0].length);
+for(let i = 0 ; i < newSales[0].length ; i++){
 let imgElmt = document.createElement('img');
 imgElmt.setAttribute('src' , objNewSales[0].img);
 console.log(objNewSales);
@@ -23,3 +25,6 @@ parentContainer.appendChild(quantityInput);
 let plusButton = document.createElement('button');
 plusButton.textContent = '+';
 parentContainer.appendChild(plusButton);
+}
+
+}
