@@ -1,34 +1,9 @@
-img {
+img{
     width: 200px;
     height: 200px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    display: block;
 }
 
-#columns div{
-    display: inline-block; 
-    margin: 40px;
-    padding: 30px;
-
+input{
+    display: block;
 }
- button{
-     margin-bottom: 60px;
- }
-
- h2 {
-     padding: 30px;
-     margin: 10px;
-}
-
-/*#column1{
-background-color: #f0e3ca;
-}
-#column2{
-    background-color: #f0e3ca; 
-}
-#column3{
-    background-color: #f0e3ca; 
-}
-#column4{
-    background-color: #f0e3ca; 
-}*/
