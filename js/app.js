@@ -6,7 +6,7 @@ let addButton = document.getElementsByTagName('button');
 let counter = 0;
 let totalPrice = 0;
 let pictArr = [];
-let cartArr = [];
+// let cartArr = [];
 
 
 for (let i = 0; i < addButton.length; i++) {
@@ -35,6 +35,7 @@ function updateStorage() {
     let arrSring;
         for (let i = 0; i < pictArr.length; i++) {
         arrSring =(pictArr[i]);
+        console.log(totalPrice);
         
     }
     
