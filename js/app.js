@@ -61,6 +61,8 @@ function cartRendering() {
     let productsEl = document.getElementById('cart');
     for(let i = 0 ; i < pictArr.length ; i++) {
         let imagelement = document.createElement('img');
+        imagelement.setAttribute('width' , '200px');
+        imagelement.setAttribute('height' , '200px');
         productsEl.appendChild(imagelement);
         imagelement.setAttribute('src' , pictArr[i]);
     }
