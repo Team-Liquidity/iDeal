@@ -6,7 +6,7 @@ let addButton = document.getElementsByTagName('button');
 let counter = 0;
 let totalPrice = 0;
 let pictArr = [];
-let cartArr = [];
+// let cartArr = [];
 
 
 for (let i = 0; i < addButton.length; i++) {
@@ -25,6 +25,8 @@ for (let i = 0; i < addButton.length; i++) {
         console.log(getQuantity);
         console.log(getPrice);
         console.log(totalPrice);
+
+        
     }
 }
 
