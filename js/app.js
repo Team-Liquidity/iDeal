@@ -25,8 +25,22 @@ for (let i = 0; i < addButton.length; i++) {
         console.log(getQuantity);
         console.log(getPrice);
         console.log(totalPrice);
+        
+
     }
 }
+ function cartRendering () {
+     let productsEl = document.getElementById('cart');
+     
+     
+
+     
+
+
+     
+ }
+ console.log(pictArr);
+ cartRendering();
 
 // let buttonCart = document.getElementById('moveToCart');
 
