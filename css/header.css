@@ -109,7 +109,7 @@ footer p{
 body
 {
     margin: 2% 5%;
-    background-color: #aee1e1;
+    background-color: #f4f9f9;
 font-family: 'PT Sans', sans-serif;
 }
 main{
@@ -133,7 +133,7 @@ footer{
 h1{
     display: inline-block;
     font-size: 30px;
-    color: #fcd1d1;
+    color: #f875aa;
     margin-left: 30px;
 font-family: 'Rock Salt', cursive;
 }
@@ -173,11 +173,12 @@ a{
 }
 
 a:hover{
-    background-color: #aee1e1;
-    border-top-left-radius: 00.7rem;
+    background-color: #fcd1d1;
+    border-top-left-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
 }
 
-main img{
+#home-photo{
     width: 100%;
 }
 
