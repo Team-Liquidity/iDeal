@@ -1,4 +1,4 @@
 # iDeal
 Craft selling Website
 
-V 2.1
+V 2.2
