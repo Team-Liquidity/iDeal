@@ -1,12 +1,17 @@
 
-#products-main img{
-    width: 300px;
-    height: 250px;
+ #img-main img{
+    width: 350px;
+    height: 300px;
     display: block;
+    border-radius: 7px;
+    margin-top: 5px;
 }
-#products-main {
-    width: 23%;
+
+
+#img-main{
+    width: 27%;
     margin: 0 auto;
+
 }
 input{
     display: block;
@@ -14,6 +19,7 @@ input{
 
 #img-container p{
     text-align: center;
+    
 }
 
 #img-container label{
@@ -27,8 +33,16 @@ input{
 #img-container button {
     width: 10%;
     margin-left: 45%;
+    margin-bottom: 15px;
+    
+
 }
 
 #home p {
     width: 10%;
+}
+fieldset {
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 10px;
 }
