@@ -58,7 +58,7 @@ function getProducts() {
 //################################################################
 
 function cartRendering() {
-    let productsEl = document.getElementById('cart');
+    let productsEl = document.getElementById('cart-product');
     for(let i = 0 ; i < pictArr.length ; i++) {
         let imagelement = document.createElement('img');
         imagelement.setAttribute('width' , '200px');
