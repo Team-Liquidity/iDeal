@@ -8,32 +8,36 @@
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="https://assets.whicdn.com/assets/favicon-acfe5c2d81119e375156c82cd638c2baa64f367772c1c93ca3d6e436306e53b1.ico">
-
+    <script src="https://kit.fontawesome.com/2a1cc42354.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <header>
         <nav>
-            <div class="logo-img">
-                <img src="../img/logo.png" alt="logo" width="75" height="50" >
+            <div class="logo">
+                <i class="fas fa-hand-holding-heart fa-4x" style="color:#fcd1d1;"></i>
             </div>
+            <h1><span id="letter">i</span>Deal</h1>
+            
             <ul>
                 <li><a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
-                <li><a href="../pages/products.html"><i class="fa fa-product-hunt" aria-hidden="true"></i>  Our Products</a></li>
-                <li><a href="../pages/sell.html"><i class="fa fa-usd" aria-hidden="true"></i> Sell with us</a></li>
-                <li><a href="../pages/about-us.html"><i class="fa fa-users" aria-hidden="true"></i> About us</a></li>
+                <li><a href="#"><i class="fa fa-product-hunt" aria-hidden="true"></i> Our Products</a>
+                </li>
+                <li><a href="sell.html"><i class="fa fa-usd" aria-hidden="true"></i> Sell with us</a></li>
+                <li><a href="about-us.html"><i class="fa fa-users" aria-hidden="true"></i> About us</a></li>
             </ul>
 
-            <div>
+            <div id="cart">
                 <ul>
-                    <li><a href="../pages/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <sup class="total"></sup></a></li>
+                    <li><a href="cart.html"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> <sup
+                                class="total"></sup></a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <hr>
-    <main id="products-main">
+    <main>
         <div id="img-container">
         <img src="../img/products/p-0-a.jpg" alt="" id="p-0">
         <p>Resien Necklace <br>South Amman Association </p>
@@ -162,8 +166,6 @@
         </label>
         <input type="number" class="quantity">
         <button><i class="fa fa-cart-plus" aria-hidden="true"></i></button><br>
-        <div id="new-container">
-
         </div>
         <hr>
     </main>
@@ -181,8 +183,8 @@
             Copyrights iDeal &copy;2021
         </p>
     </footer>
+    <script src="../js/render.js"></script>
     <script src="../js/app.js"></script>
-    <script src="../js/products.js"></script>
 </body>
 
 </html>
