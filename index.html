@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>iDeal</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="shortcut icon" type="image/x-icon"
-        href="https://assets.whicdn.com/assets/favicon-acfe5c2d81119e375156c82cd638c2baa64f367772c1c93ca3d6e436306e53b1.ico">
+    <script src="https://kit.fontawesome.com/2a1cc42354.js" crossorigin="anonymous"></script>
 </head>
 
 
@@ -17,9 +16,10 @@
     <header>
         <nav>
             <div class="logo">
-                <img src="../img/logo.png" alt="logo" />
+                <i class="fas fa-hand-holding-heart fa-4x" style="color:#fcd1d1;"></i>
             </div>
-
+            <h1><span id="letter">i</span>Deal</h1>
+            
             <ul>
                 <li><a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
                 <li><a href="pages/products.html"><i class="fa fa-product-hunt" aria-hidden="true"></i> Our Products</a>
@@ -30,7 +30,7 @@
 
             <div id="cart">
                 <ul>
-                    <li><a href="pages/cart.html"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <sup
+                    <li><a href="pages/cart.html"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> <sup
                                 class="total"></sup></a></li>
                 </ul>
             </div>
@@ -38,6 +38,8 @@
     </header>
     <hr>
     <main>
+        <div id="home">
+        <img src="img/index-Photo.jpg" alt="">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam veritatis minima asperiores excepturi est,
             dignissimos, fugiat laborum porro sit quos error repellendus ipsa, vitae dolor deleniti ducimus ea nesciunt
             vel!
@@ -45,12 +47,14 @@
             soluta voluptate est id explicabo aperiam amet repellendus porro accusantium culpa sunt aliquid facere
             ipsam!
         </p>
-
+        </div>
+        <hr>
         <form action="">
             <label for="feedback">Give us a feedback</label><br>
             <textarea name="" id="" cols="40" rows="10"></textarea>
+            <input type="submit" value="Give Feed back" class="submitter">
         </form>
-
+        <hr>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>

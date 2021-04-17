@@ -1,4 +1,4 @@
-/* *{
+/* /* *{
     box-sizing: border-box;
 }
  nav {
@@ -36,13 +36,15 @@ float: right;
  }
 
   */
+
+/*
 body{
     box-sizing: border-box;
     margin: 2% 6%;
     background-color: #e7e6e1;
     /* background-image: url('/img/Background1.jpeg'); */
-}
-
+/* //} */
+/*
   .logo img{
       float: left;
       margin-left: 15px;
@@ -82,8 +84,8 @@ body{
  }
 
  a:hover{
-    background-color: #F6DFEB;
-    border:1px solid #F6DFEB;
+    background-color: #e7e6e1;
+    border:1px solid #e7e6e1;
     border-radius: 0.7rem;
  }
 
@@ -102,4 +104,118 @@ body{
 footer p{
     font-size: small;
     margin: 0;
+} */
+
+body
+{
+    margin: 2% 5%;
+    background-color: #aee1e1;
+font-family: 'PT Sans', sans-serif;
+}
+main{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 0.7rem;
+}
+footer{
+    display: block;
+    border: 1px solid white;
+    border-radius: 0.7rem;
+    background-color: white;
+    clear: both;
+}
+
+.logo{
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+h1{
+    display: inline-block;
+    font-size: 30px;
+    color: #fcd1d1;
+    margin-left: 30px;
+font-family: 'Rock Salt', cursive;
+}
+ul li{
+    display: inline-block;
+    height: 100%;
+    padding-left: 30px;
+    margin-bottom: px;
+}
+ul{
+    display: inline-block;
+    width: 55%;
+    margin-left: 10%;
+    height: 60%;
+}
+#cart{
+    float: right;
+    margin-right: 60px;
+    margin-top: 20px;
+}
+#letter{
+    margin-right: 5px;
+    color: lightgrey;
+}
+
+nav{
+    background-color: white;
+    height: 85px;
+    border: 1px solid white;
+    border-radius: 0.7rem;
+}
+a{
+    padding:20px ;
+    text-decoration: none;
+    color: #536162;
+    height: 100%;
+}
+
+a:hover{
+    background-color: #aee1e1;
+    border-top-left-radius: 00.7rem;
+}
+
+main img{
+    width: 100%;
+}
+
+body hr{
+    border:dotted #fcd1d1 6px;
+    border-bottom: none;
+    width: 10%;
+    margin:40px auto 40px auto ;
+ }
+
+ #home p{
+     width: 60%;
+     margin: 20px auto;
+ }
+#home img{
+    border-top-left-radius:0.6rem ;
+    border-top-right-radius:0.6rem ;
+}
+ form{
+     width: 23%;
+     margin:0 auto;
+ }
+ textarea{
+     background-color: #fcd1d1;
+     border-radius: 0.5rem;
+     margin-top: 15px;
+ }
+ form label{
+     width: 50%;
+    margin:  0 auto;
+    font-family: 'Rock Salt', cursive;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: #aee1e1;
+}
+
+.submitter{
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: #aee1e1;
 }
