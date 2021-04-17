@@ -30,3 +30,5 @@ function render (){
         localStorage.removeItem('Product Object');
     }
         render();
+
+  

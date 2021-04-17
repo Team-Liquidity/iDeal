@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <script src="https://kit.fontawesome.com/2a1cc42354.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/feedback.css">
 </head>
-
 
 <body>
 
@@ -49,19 +49,30 @@
                 professional individuats for this industry.
             </p>
         </div>
-        <hr>
-        <form action="">
+        <hr> 
+        <div id="feedBackCont">
+        <form action="" id="givingFeed">
             <label for="feedback">Give us a feedback</label><br>
             <textarea name="" id="" cols="40" rows="10"></textarea>
-            <input type="submit" value="Give Feed back" class="submitter">
+            <input type="submit" value="Give Feed back" id="submitter">
         </form>
+         
+            <fieldset  id="feedBack">
+             <legend>Feed-Back's </legend> 
+                <p id="feedShow">
+                 
+                </p>
+            
+            </fieldset>
+        </div>
+     
         <hr>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star checked"></span>
         <span class="fa fa-star"></span>
         <span class="fa fa-star"></span>
-
+       
     </main>
     <hr>
     <footer>
@@ -78,7 +89,6 @@
             Copyrights iDeal &copy;2021
         </p>
     </footer>
-
+    <script src="js/feed.js"></script>
 </body>
-
 </html>
