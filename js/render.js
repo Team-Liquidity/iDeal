@@ -1,13 +1,10 @@
 let imgContainer = document.getElementById('img-container')
 let newSales = localStorage.getItem('Product Object');
 let objNewSales = JSON.parse(newSales);
-console.log(imgContainer);
 function render (){
-    console.log(imgContainer);
-    for(let i = 0 ; i < newSales[0].length ; i++){
+    for(let i = 0 ; i < objNewSales.length ; i++){
     let imgElmt = document.createElement('img');
     imgElmt.setAttribute('src' , objNewSales[0].img);
-    console.log(objNewSales);
     imgContainer.appendChild(imgElmt);
     
     let description = document.createElement('p');
@@ -27,8 +24,8 @@ function render (){
     imgContainer.appendChild(plusButton);
     }
     
-        localStorage.removeItem('Product Object');
     }
-        render();
 
-  
+    render();
+
+

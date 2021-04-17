@@ -9,7 +9,6 @@ function Product(name , phoneNumber , description , price , img) {
     this.img = img;
     Product.productArr.push(this);
 }
-let imgContainer = document.getElementById('img-container');
 Product.productArr = [];
 let btn = document.getElementById('add-products');
 btn.addEventListener('submit' , addProduct);
@@ -18,8 +17,9 @@ function addProduct(event) {
     event.preventDefault();
     new Product(event.target['full-name'].value , event.target['phone'].value , event.target['description'].value , event.target['price'].value ,'../img/products/newProduct.jpg');
     console.log(Product.productArr);
-    localStorage.setItem('Product Object' ,JSON.stringify(Product.productArr));
-    
+    for(let i =0 ; i < Product.productArr.length ; i++){
+    localStorage.setItem('Product Object' , JSON.stringify(Product.productArr));
+    }
 }
 
 
