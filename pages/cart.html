@@ -34,15 +34,30 @@
 
             <div id="cart">
                 <ul>
-                    <li><a href="#"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> <sup
-                        class="total" id="cart-1"></sup></a></li>
+                    <li><a href="#"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> <sup class="total"
+                                id="cart-1"></sup></a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <hr>
     <main id="cart-main">
-
+        <table id="purchases-table">
+            <tr>
+                <th>
+                    Image
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Total
+                </th>
+            </tr>
+        </table>
         <div id="cart-product">
 
         </div>
@@ -57,7 +72,7 @@
                     Phone Number
                 </th>
                 <th>
-                   Email Address
+                    Email Address
                 </th>
                 <th>
                     Item Quantity
@@ -76,14 +91,13 @@
                     Buy now
                 </legend>
                 <label for="full-name">
-                     Full name
+                    Full name
                 </label><br>
                 <input type="text" id="name" required><br>
                 <label for="number">
-                     Phone number
+                    Phone number
                 </label><br>
-                <input type="tel" id="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                required><br>
+                <input type="tel" id="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
                 <label for="address1">
                     Email Address
                 </label><br>
@@ -121,6 +135,7 @@
 
     </footer>
     <script src="../js/app.js"></script>
+    <script src="../js/cart.js"></script>
     <script src="../js/products.js"></script>
     <script src="../js/render.js"></script>
     <script src="../js/feed.js"></script>

@@ -6,6 +6,8 @@ let addButton = document.getElementsByTagName('button');
 let counter = 0;
 let totalPrice = 0;
 let pictArr = [];
+let priceArr = [];
+let quantityArr = [];
 let getQuantity = 0;
 let total = document.getElementsByClassName('total')[0]; ;
 
@@ -16,11 +18,11 @@ for (let i = 0; i < addButton.length; i++) {
 
     function addToCart(event) {
         let img = document.getElementById('p-' + i).getAttribute('src'); // returns the source of the image 
-        console.log(img);
         pictArr.push(img); //add the product picture to the pictArr
-        console.log(pictArr);
         getQuantity = document.getElementsByClassName('quantity')[i].value; // gets the quantity of bought products
+        quantityArr.push(getQuantity);
         let getPrice = price[i].getAttribute('value'); //price per product
+        priceArr.push(getPrice); 
         counter += parseInt(getQuantity); // parse the value to an integer
         total.textContent = counter;
         totalPrice += getQuantity * getPrice;
@@ -62,18 +64,18 @@ function getProducts() {
 //console.log(productsdata);
 //################################################################
 
-function cartRendering() {
-    let productsEl = document.getElementById('cart-product');
-    for (let i = 0; i < pictArr.length; i++) {
+// function cartRendering() {
+//     let productsEl = document.getElementById('cart-product');
+//     for (let i = 0; i < pictArr.length; i++) {
 
-        let imagelement = document.createElement('img');
-        imagelement.setAttribute('width', '200px');
-        imagelement.setAttribute('height', '200px');
-        productsEl.appendChild(imagelement);
-        imagelement.setAttribute('src', pictArr[i]);
+//         let imagelement = document.createElement('img');
+//         imagelement.setAttribute('width', '200px');
+//         imagelement.setAttribute('height', '200px');
+//         productsEl.appendChild(imagelement);
+//         imagelement.setAttribute('src', pictArr[i]);
 
-    }
-}
+//     }
+// }
 
 
 
