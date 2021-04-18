@@ -7,8 +7,12 @@ let counter = 0;
 let totalPrice = 0;
 let pictArr = [];
 
+let getQuantity='';
+
+
 for (let i = 0; i < addButton.length; i++) {
     addButton[i].addEventListener('click', addToCart);
+     
 
     function addToCart(event) {
         let img = document.getElementById('p-' + i).getAttribute('src'); // returns the source of the image 
@@ -36,10 +40,10 @@ for (let i = 0; i < addButton.length; i++) {
 //################################################################
 function updateStorage() {
     let arrString;
-        arrString = JSON.stringify(pictArr);
-        localStorage.setItem('products', arrString);
-        let totalP = totalPrice;
-        localStorage.setItem('total' , JSON.stringify(totalP));
+    arrString = JSON.stringify(pictArr);
+    localStorage.setItem('products', arrString);
+    let totalP = totalPrice;
+    localStorage.setItem('total', JSON.stringify(totalP));
 }
 //###############################################################    
 function getProducts() {
@@ -59,12 +63,12 @@ function getProducts() {
 
 function cartRendering() {
     let productsEl = document.getElementById('cart-product');
-    for(let i = 0 ; i < pictArr.length ; i++) {
+    for (let i = 0; i < pictArr.length; i++) {
         let imagelement = document.createElement('img');
-        imagelement.setAttribute('width' , '200px');
-        imagelement.setAttribute('height' , '200px');
+        imagelement.setAttribute('width', '200px');
+        imagelement.setAttribute('height', '200px');
         productsEl.appendChild(imagelement);
-        imagelement.setAttribute('src' , pictArr[i]);
+        imagelement.setAttribute('src', pictArr[i]);
     }
 }
 getProducts();
@@ -73,21 +77,54 @@ cartRendering();
 
 
 let purchaseForm = document.getElementById('cart-form');
-purchaseForm.addEventListener('submit' , createInvoice);
+purchaseForm.addEventListener('submit', createInvoice);
 
-function createInvoice (event) {
+let fullName = '';
+let phoneNumber = '';
+let address = '';
+let payPal = '';
+let cash = '';
+let visa = '';
+
+function createInvoice(event) {
     event.preventDefault();
-    let name = event.target['name'].value;
-    let phoneNumber = event.target['number'].value;
-    let address = event.target['address1'].value;
-    let payPal = event.target['paypal'].checked;
-    let cash = event.target['cash'].checked;
-    let visa = event.target['visa'].checked;
-    
+    fullName = event.target['name'].value;
+    phoneNumber = event.target['number'].value;
+    address = event.target['address1'].value;
+    payPal = event.target['paypal'].checked;
+    cash = event.target['cash'].checked;
+    visa = event.target['visa'].checked;
+
     renderInvoice();
 }
 
+let tablePaernt = document.getElementById('invoice')
 
-function renderInvoice(){
-    
+
+function renderInvoice() {
+
+    let tableRow = tablePaernt.appendChild(document.createElement('tr'));
+
+    tableRow.appendChild(document.createElement('td')).textContent = fullName;
+
+    tableRow.appendChild(document.createElement('td')).textContent = phoneNumber;
+
+    tableRow.appendChild(document.createElement('td')).textContent = address;
+
+    tableRow.appendChild(document.createElement('td')).textContent = getQuantity;
+
+    tableRow.appendChild(document.createElement('td')).textContent = totalPrice;
+    if(visa){
+    tableRow.appendChild(document.createElement('td')).textContent = 'Visa';
+    }
+    else if(cash){
+    tableRow.appendChild(document.createElement('td')).textContent ='Cash';
+    }
+
+    else{
+    tableRow.appendChild(document.createElement('td')).textContent ='PayPal';
+    }
+
 }
+
+console.log(totalPrice);
