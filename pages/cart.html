@@ -56,7 +56,7 @@
                     Phone Number
                 </th>
                 <th>
-                    Address
+                   Email Address
                 </th>
                 <th>
                     Item Quantity
@@ -75,17 +75,18 @@
                     Buy now
                 </legend>
                 <label for="full-name">
-                    Enter Full name
+                     Full name
                 </label><br>
-                <input type="text" id="name"><br>
+                <input type="text" id="name" required><br>
                 <label for="number">
-                    Enter Phone number
+                     Phone number
                 </label><br>
-                <input type="text" id="number"><br>
+                <input type="tel" id="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required><br>
                 <label for="address1">
-                    Enter Address
+                    Email Address
                 </label><br>
-                <input type="text" id="address1"><br>
+                <input type="email" id="address1" required><br>
 
                 <input type="radio" id="cash" value="cash" name="payment">
                 <label for="cash"><i class="fa fa-money" aria-hidden="true" style="color: green;"></i>Cash</label>
