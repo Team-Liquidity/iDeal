@@ -1,0 +1,49 @@
+
+ #img-main img{
+    width: 350px;
+    height: 300px;
+    display: block;
+    border-radius: 7px;
+    margin-top: 5px;
+}
+
+
+#img-main{
+    width: 27%;
+    margin: 0 auto;
+    background-color:#f4f9f9 ;
+
+}
+input{
+    display: block;
+}
+
+#img-container p{
+    text-align: center;
+    
+}
+
+#img-container label{
+    text-align: center;
+}
+
+#img-container input{
+    margin: 0 auto;
+}
+
+#img-container button {
+    width: 10%;
+    margin-left: 45%;
+    margin-bottom: 15px;
+    
+
+}
+
+#home p {
+    width: 10%;
+}
+fieldset {
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 10px;
+}

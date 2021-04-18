@@ -4,37 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Sell with us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="https://kit.fontawesome.com/2a1cc42354.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://assets.whicdn.com/assets/favicon-acfe5c2d81119e375156c82cd638c2baa64f367772c1c93ca3d6e436306e53b1.ico">
 </head>
 
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img src="#" alt="logo" />
-                <h1>
-                    iDeal
-                </h1>
-                <p>
-
-                </p>
+                <i class="fas fa-hand-holding-heart fa-4x" style="color:#f875aa;"></i>
             </div>
-
+            <h1><span id="letter">i</span>Deal</h1>
+            
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Our Products</a></li>
-                <li><a href="#">Sell with us</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
+                <li><a href="products.html"><i class="fa fa-product-hunt" aria-hidden="true"></i> Our Products</a>
+                </li>
+                <li><a href="#"><i class="fa fa-usd" aria-hidden="true"></i> Sell with us</a></li>
+                <li><a href="about-us.html"><i class="fa fa-users" aria-hidden="true"></i> About us</a></li>
             </ul>
 
-            <div>
+            <div id="cart">
                 <ul>
-                    <li><a href="#">My Cart</a></li>
+                    <li><a href="cart.html"><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i> <sup
+                                class="total"></sup></a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <hr>
     <main>
-        <form action="">
+        <form id="add-products" action="">
             <fieldset>
                 <legend>Add your product</legend>
                 <label for="full-name">
@@ -55,21 +59,26 @@
                 <input type="text" id="price"><br>
                 <label for="image"></label>
                 <input type="file" id="image"><br>
-                <input type="submit" value="Add product">
+                <input type="submit" id="add-product" value="Add product" class="submitter">
             </fieldset>
         </form>
     </main>
+    <hr>
     <footer>
-        <p>Contact us :
-            <i></i> Phone : +962-77-777-7777
-            <i></i> Address : Amman - Jordan
-            <i></i> Email : iDeal@iDeal.com
+        <p id="first-p">Contact us :
+            <br>
+             <i class="fa fa-phone-square" aria-hidden="true"></i>  +962-77-777-7777
+             <br>
+             <i class="fa fa-map-marker" aria-hidden="true"></i> Amman - Jordan
+             <br>
+             <i class="fa fa-envelope" aria-hidden="true"></i> iDeal@iDeal.com
         </p>
 
-        <p>
-            iDeal &copy;2021
+        <p id="copyRight">
+             iDeal &copy;2021
         </p>
     </footer>
+    <script src="../js/products.js"></script>
 </body>
 
 </html>
