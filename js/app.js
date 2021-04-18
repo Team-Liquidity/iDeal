@@ -7,7 +7,7 @@ let counter = 0;
 let totalPrice = 0;
 let pictArr = [];
 let getQuantity = 0;
-
+let total = document.getElementsByClassName('total')[0]; ;
 
 
 for (let i = 0; i < addButton.length; i++) {
@@ -22,7 +22,6 @@ for (let i = 0; i < addButton.length; i++) {
         getQuantity = document.getElementsByClassName('quantity')[i].value; // gets the quantity of bought products
         let getPrice = price[i].getAttribute('value'); //price per product
         counter += parseInt(getQuantity); // parse the value to an integer
-        let total = document.getElementsByClassName('total')[0];
         total.textContent = counter;
         totalPrice += getQuantity * getPrice;
         updateStorage();
@@ -34,6 +33,8 @@ for (let i = 0; i < addButton.length; i++) {
     }
 
 }
+total.textContent =localStorage.getItem('Quantity counter');
+
 //################################################################
 function updateStorage() {
     let arrString;
@@ -165,7 +166,7 @@ function renderInvoice() {
 
     localStorage.removeItem('products');
     localStorage.removeItem('Quantity counter');
-    localStorage.removeItem('total');
+    localStorage.removeItem('products');
 
 
 }
