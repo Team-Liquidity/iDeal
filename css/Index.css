@@ -1,0 +1,44 @@
+main{
+    box-sizing: border-box;
+    height: fit-content;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 0.7rem;
+}
+
+#home-photo{
+    width: 100%;
+}
+
+
+#home p{
+    width: 60%;
+    margin: 20px auto;
+}
+#home img{
+   border-top-left-radius:0.6rem ;
+   border-top-right-radius:0.6rem ;
+}
+form{
+    width: 23%;
+    margin:0 auto;
+}
+textarea{
+    background-color: #fcd1d1;
+    border-radius: 0.5rem;
+    margin-top: 15px;
+}
+form label{
+    width: 50%;
+   margin:  0 auto;
+   font-family: 'Rock Salt', cursive;
+   letter-spacing: 4px;
+   font-weight: 900;
+   color: #aee1e1;
+}
+
+.submitter{
+   cursor: pointer;
+   margin: 0 auto;
+   background-color: #aee1e1;
+}
