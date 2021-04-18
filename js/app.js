@@ -87,5 +87,4 @@ function createInvoice (event) {
 
 
 function renderInvoice(){
-    
 }
