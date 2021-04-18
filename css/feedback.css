@@ -1,0 +1,42 @@
+/* #givingFeed{
+    float:right left;
+    width: 40%;
+    
+}
+#feedBack{
+   float:right;
+   width: 40%;
+
+
+} */
+#feedBackCont{
+    display:inline-block
+    width: 100%;
+
+}
+#feedBack{
+    overflow: auto;
+    width: 29%;
+    height: 228px;
+    border-radius: 8px;
+
+}
+
+fieldset legend{
+    background-color: #fcd1d1;
+    height: 22px;
+    font-size: bold;
+    text-size-adjust: bold;
+    border-radius: 10px;
+}
+fieldset legend:hover{
+    color: rgb(251, 251, 251);
+    font-family: cursive;
+    font-size: bold;
+    background-color: rgb(154, 162, 167);
+}
+
+#feedshow{
+    width: 20%;
+    overflow: scroll;
+}

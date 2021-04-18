@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <script src="https://kit.fontawesome.com/2a1cc42354.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/feedback.css">
 </head>
-
 
 <body>
 
@@ -50,18 +50,48 @@
                 professional individuats for this industry.
             </p>
         </div>
-        <hr>
-        <form action="">
+        <hr> 
+        <div id="feedBackCont">
+        <form action="" id="givingFeed">
             <label for="feedback">Give us a feedback</label><br>
             <textarea name="" id="" cols="40" rows="10"></textarea>
-            <input type="submit" value="Give Feed back" class="submitter">
+            <input type="submit" value="Give Feed back" id="submitter">
         </form>
+         
+            <fieldset  id="feedBack">
+             <legend>Feed-Back's </legend> 
+                <p id="feedShow">
+                 
+                </p>
+            
+            </fieldset>
+        </div>
+     
         <hr>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
+        <link rel="stylesheet" href="/css/rating.css">
+        <div class="rate">
+
+            <input type="radio" id="star5" name="rate" value="5" />
+
+            <label for="star5" title="text">5  </label>
+
+            <input type="radio" id="star4" name="rate" value="4" />
+
+            <label for="star4" title="text">4  </label>
+
+            <input type="radio" id="star3" name="rate" value="3" />
+
+            <label for="star3" title="text">3  </label>
+
+            <input type="radio" id="star2" name="rate" value="2" />
+
+            <label for="star2" title="text">2  </label>
+
+            <input type="radio" id="star1" name="rate" value="1" />
+
+            <label for="star1" title="text">1  </label>
+
+        </div>
 
     </main>
     <hr>
@@ -79,7 +109,6 @@
              iDeal &copy;2021
         </p>
     </footer>
-
+    <script src="js/feed.js"></script>
 </body>
-
 </html>
