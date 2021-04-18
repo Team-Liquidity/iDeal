@@ -47,3 +47,9 @@ fieldset {
     background-color: white;
     border-radius: 10px;
 }
+#cart-main{
+    height: 500px;
+}
+#cart-form{
+    height: 500px;
+}

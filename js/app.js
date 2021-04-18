@@ -68,18 +68,24 @@ function cartRendering() {
 getProducts();
 cartRendering();
 
-// let buttonCart = document.getElementById('moveToCart');
-
-// buttonCart.addEventListener('submit', moveToCart);
-
-//         function moveToCart(event){
-//         event.preventDefault();
-//         cartArr.push(buttonCart);
-//         console.log(cartArr);
-//         let getCart = document.getElementsByClassName(total);
-//         console.log(getCart);
 
 
-//         }
+let purchaseForm = document.getElementById('cart-form');
+purchaseForm.addEventListener('submit' , createInvoice);
 
-//         moveToCart();
+function createInvoice (event) {
+    event.preventDefault();
+    let name = event.target['name'].value;
+    let phoneNumber = event.target['number'].value;
+    let address = event.target['address1'].value;
+    let payPal = event.target['paypal'].checked;
+    let cash = event.target['cash'].checked;
+    let visa = event.target['visa'].checked;
+    
+    renderInvoice();
+}
+
+
+function renderInvoice(){
+    
+}
