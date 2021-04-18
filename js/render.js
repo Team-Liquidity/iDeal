@@ -3,25 +3,27 @@ let newSales = localStorage.getItem('Product Object');
 let objNewSales = JSON.parse(newSales);
 function render (){
     for(let i = 0 ; i < objNewSales.length ; i++){
+    let fieldSet = document.createElement('fieldset');
+    imgContainer.appendChild(fieldSet);
     let imgElmt = document.createElement('img');
     imgElmt.setAttribute('src' , objNewSales[0].img);
-    imgContainer.appendChild(imgElmt);
+    fieldSet.appendChild(imgElmt);
     
     let description = document.createElement('p');
     description.textContent = objNewSales[0].description;
-    imgContainer.appendChild(description);
+    fieldSet.appendChild(description);
     
     let priceLabel = document.createElement('label');
     priceLabel.textContent = objNewSales[0].price + ' JOD';
-    imgContainer.appendChild(priceLabel);
+    fieldSet.appendChild(priceLabel);
     
     let quantityInput = document.createElement('input');
     quantityInput.setAttribute('type' , 'number');
-    imgContainer.appendChild(quantityInput);
+    fieldSet.appendChild(quantityInput);
     
     let plusButton = document.createElement('button');
     plusButton.textContent = '+';
-    imgContainer.appendChild(plusButton);
+    fieldSet.appendChild(plusButton);
     }
     
     }
