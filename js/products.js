@@ -19,6 +19,7 @@ function addProduct(event) {
     console.log(Product.productArr);
     for(let i =0 ; i < Product.productArr.length ; i++){
     localStorage.setItem('Product Object' , JSON.stringify(Product.productArr));
+    alert('Your product has been added, thank you for choosing us!');
     }
 }
 

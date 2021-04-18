@@ -28,7 +28,11 @@ for (let i = 0; i < addButton.length; i++) {
         /*console.log(getQuantity);
         console.log(getPrice);
         console.log(totalPrice);*/
-    }
+        if(getQuantity>0){
+            alert(`You added ${getQuantity} products to the cart`)
+        }
+
+        }
 
 }
 //################################################################
