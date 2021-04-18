@@ -6,47 +6,32 @@ let addButton = document.getElementsByTagName('button');
 let counter = 0;
 let totalPrice = 0;
 let pictArr = [];
-let srcImg = [];
-let quantityArr =[];
-let priceArr=[];
-let getQuantity=0;
+let getQuantity = 0;
 
-
-
-let getQuantity='';
 
 
 for (let i = 0; i < addButton.length; i++) {
     addButton[i].addEventListener('click', addToCart);
-     
+
 
     function addToCart(event) {
         let img = document.getElementById('p-' + i).getAttribute('src'); // returns the source of the image 
         console.log(img);
         pictArr.push(img); //add the product picture to the pictArr
         console.log(pictArr);
-        //   srcImg.push(img.src);
-           console.log(pictArr);
         getQuantity = document.getElementsByClassName('quantity')[i].value; // gets the quantity of bought products
-        pictArr.push(getQuantity);
-        quantityArr.push(getQuantity);
-        console.log(pictArr);
         let getPrice = price[i].getAttribute('value'); //price per product
-        priceArr.push(getPrice);
         counter += parseInt(getQuantity); // parse the value to an integer
         let total = document.getElementsByClassName('total')[0];
         total.textContent = counter;
         totalPrice += getQuantity * getPrice;
         updateStorage();
-        console.log(totalPrice);
-        /*console.log(getQuantity);
-        console.log(getPrice);
-        console.log(totalPrice);*/
-        if(getQuantity>0){
+        localStorage.setItem('Quantity counter' , JSON.stringify(counter));
+        if (getQuantity > 0) {
             alert(`You added ${getQuantity} products to the cart`)
         }
 
-        }
+    }
 
 }
 //################################################################
@@ -92,33 +77,33 @@ function cartRendering() {
 
 
 
-function renderTable (){
-    let parent = document.getElementById('table-product');
-let table = document.createElement('table');
-parent.appendChild(table);
+// function renderTable() {
+//     let parent = document.getElementById('table-product');
+//     let table = document.createElement('table');
+//     parent.appendChild(table);
 
 
 
-let firstRow = document.createElement('tr');
-         table.appendChild(firstRow);
-         let thPrice = document.createElement('th');
-         firstRow.appendChild(thPrice);
-         thPrice.textContent='Price';
+//     let firstRow = document.createElement('tr');
+//     table.appendChild(firstRow);
+//     let thPrice = document.createElement('th');
+//     firstRow.appendChild(thPrice);
+//     thPrice.textContent = 'Price';
 
-         let thProductPrice = document.createElement('th');
-         firstRow.appendChild(thProductPrice);
-         thProductPrice.textContent=localStorage.getItem('price');
+//     let thProductPrice = document.createElement('th');
+//     firstRow.appendChild(thProductPrice);
+//     thProductPrice.textContent = localStorage.getItem('price');
 
-let secondRow = document.createElement('tr');
-         table.appendChild(secondRow);
-         secondRow.textContent='Quantity';
-
-
-}
+//     let secondRow = document.createElement('tr');
+//     table.appendChild(secondRow);
+//     secondRow.textContent = 'Quantity';
 
 
+// }
 
-renderTable();
+
+
+// renderTable();
 
 
 
@@ -154,7 +139,8 @@ let tablePaernt = document.getElementById('invoice')
 
 
 function renderInvoice() {
-
+    let itemQuantity = localStorage.getItem('Quantity counter');
+    let invoiceTotal = localStorage.getItem('total');
     let tableRow = tablePaernt.appendChild(document.createElement('tr'));
 
     tableRow.appendChild(document.createElement('td')).textContent = fullName;
@@ -163,19 +149,24 @@ function renderInvoice() {
 
     tableRow.appendChild(document.createElement('td')).textContent = address;
 
-    tableRow.appendChild(document.createElement('td')).textContent = getQuantity;
+    tableRow.appendChild(document.createElement('td')).textContent = itemQuantity + ' Products';
 
-    tableRow.appendChild(document.createElement('td')).textContent = totalPrice;
-    if(visa){
-    tableRow.appendChild(document.createElement('td')).textContent = 'Visa';
+    tableRow.appendChild(document.createElement('td')).textContent = invoiceTotal + ' JOD';
+    if (visa) {
+        tableRow.appendChild(document.createElement('td')).textContent = 'Visa';
     }
-    else if(cash){
-    tableRow.appendChild(document.createElement('td')).textContent ='Cash';
+    else if (cash) {
+        tableRow.appendChild(document.createElement('td')).textContent = 'Cash';
     }
 
-    else{
-    tableRow.appendChild(document.createElement('td')).textContent ='PayPal';
+    else {
+        tableRow.appendChild(document.createElement('td')).textContent = 'PayPal';
     }
+
+    localStorage.removeItem('products');
+    localStorage.removeItem('Quantity counter');
+    localStorage.removeItem('total');
+
 
 }
 
