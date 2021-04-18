@@ -106,6 +106,8 @@ footer p{
     margin: 0;
 } */
 
+
+
 body
 {
     margin: 2% 5%;
@@ -118,13 +120,6 @@ main{
     background-color: white;
     border: 1px solid white;
     border-radius: 0.7rem;
-}
-footer{
-    display: block;
-    border: 1px solid white;
-    border-radius: 0.7rem;
-    background-color: white;
-    clear: both;
 }
 
 .logo{
