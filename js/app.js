@@ -6,8 +6,6 @@ let addButton = document.getElementsByTagName('button');
 let counter = 0;
 let totalPrice = 0;
 let pictArr = [];
-// let cartArr = [];
-
 
 for (let i = 0; i < addButton.length; i++) {
     addButton[i].addEventListener('click', addToCart);
