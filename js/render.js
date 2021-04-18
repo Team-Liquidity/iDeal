@@ -1,11 +1,16 @@
+
 let imgContainer = document.getElementById('img-container')
 let newSales = localStorage.getItem('Product Object');
 let objNewSales = JSON.parse(newSales);
+console.log(objNewSales);
+
+
 function render (){
     for(let i = 0 ; i < objNewSales.length ; i++){
     let fieldSet = document.createElement('fieldset');
     imgContainer.appendChild(fieldSet);
     let imgElmt = document.createElement('img');
+    console.log(imgElmt);
     imgElmt.setAttribute('src' , objNewSales[0].img);
     fieldSet.appendChild(imgElmt);
     
@@ -27,6 +32,7 @@ function render (){
     }
     
     }
+
 
     render();
 
