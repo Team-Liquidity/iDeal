@@ -13,8 +13,12 @@ let getQuantity=0;
 
 
 
+let getQuantity='';
+
+
 for (let i = 0; i < addButton.length; i++) {
     addButton[i].addEventListener('click', addToCart);
+     
 
     function addToCart(event) {
         let img = document.getElementById('p-' + i).getAttribute('src'); // returns the source of the image 
@@ -38,20 +42,20 @@ for (let i = 0; i < addButton.length; i++) {
         /*console.log(getQuantity);
         console.log(getPrice);
         console.log(totalPrice);*/
-    }
+        if(getQuantity>0){
+            alert(`You added ${getQuantity} products to the cart`)
+        }
+
+        }
 
 }
 //################################################################
 function updateStorage() {
     let arrString;
-    let quantityString;
-    let priceString;
+
     arrString = JSON.stringify(pictArr);
-    quantityString=JSON.stringify(quantityArr);
-    priceString=JSON.stringify(priceArr)
     localStorage.setItem('products', arrString);
-    localStorage.setItem('quantity',quantityString);
-    localStorage.setItem('price',priceString);
+
     let totalP = totalPrice;
     localStorage.setItem('total', JSON.stringify(totalP));
 }
@@ -76,21 +80,12 @@ function cartRendering() {
     let productsEl = document.getElementById('cart-product');
     for (let i = 0; i < pictArr.length; i++) {
 
-        let imagElement = document.createElement('img');
-        imagElement.setAttribute('width', '200px');
-        imagElement.setAttribute('height', '200px');
-        productsEl.appendChild(imagElement);
-        imagElement.setAttribute('src', pictArr[i]);
-        srcImg.push(imagElement.src);
+        let imagelement = document.createElement('img');
+        imagelement.setAttribute('width', '200px');
+        imagelement.setAttribute('height', '200px');
+        productsEl.appendChild(imagelement);
+        imagelement.setAttribute('src', pictArr[i]);
 
-      //  console.log(srcImg);
-       /* getbreack:if (srcImg[i] === imagElement.src) {
-            break getbreack;
-        } else {
-            continue;
-        }*/
-      
-        
     }
 }
 
@@ -136,19 +131,53 @@ cartRendering();
 
 let purchaseForm = document.getElementById('cart-form');
 purchaseForm.addEventListener('submit', createInvoice);
+let fullName = '';
+let phoneNumber = '';
+let address = '';
+let payPal = '';
+let cash = '';
+let visa = '';
 
 function createInvoice(event) {
     event.preventDefault();
-    let name = event.target['name'].value;
-    let phoneNumber = event.target['number'].value;
-    let address = event.target['address1'].value;
-    let payPal = event.target['paypal'].checked;
-    let cash = event.target['cash'].checked;
-    let visa = event.target['visa'].checked;
+    fullName = event.target['name'].value;
+    phoneNumber = event.target['number'].value;
+    address = event.target['address1'].value;
+    payPal = event.target['paypal'].checked;
+    cash = event.target['cash'].checked;
+    visa = event.target['visa'].checked;
 
     renderInvoice();
 }
 
+let tablePaernt = document.getElementById('invoice')
 
-// function renderInvoice(){
-    //}
+
+function renderInvoice() {
+
+    let tableRow = tablePaernt.appendChild(document.createElement('tr'));
+
+    tableRow.appendChild(document.createElement('td')).textContent = fullName;
+
+    tableRow.appendChild(document.createElement('td')).textContent = phoneNumber;
+
+    tableRow.appendChild(document.createElement('td')).textContent = address;
+
+    tableRow.appendChild(document.createElement('td')).textContent = getQuantity;
+
+    tableRow.appendChild(document.createElement('td')).textContent = totalPrice;
+    if(visa){
+    tableRow.appendChild(document.createElement('td')).textContent = 'Visa';
+    }
+    else if(cash){
+    tableRow.appendChild(document.createElement('td')).textContent ='Cash';
+    }
+
+    else{
+    tableRow.appendChild(document.createElement('td')).textContent ='PayPal';
+    }
+
+}
+
+
+console.log(totalPrice);
