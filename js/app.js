@@ -113,7 +113,7 @@ function getProducts() {
 
 
 getProducts();
-cartRendering();
+// cartRendering();
 
 
 
@@ -170,8 +170,4 @@ function renderInvoice() {
     localStorage.removeItem('Quantity counter');
     localStorage.removeItem('products');
 
-
 }
-
-
-console.log(totalPrice);
