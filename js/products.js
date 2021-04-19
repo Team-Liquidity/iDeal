@@ -26,7 +26,7 @@ function addProduct(event) {
     let stringObject = JSON.stringify(Product.productArr);
     console.log(stringObject);
         localStorage.setItem('Product Object',stringObject);
-        swal('Process Complete' , 'Your product has been added, thank you for choosing us!');
+        swal('Process Succeed' , 'Your product has been added, thank you for choosing us!');
 }
 console.log(Product.productArr);
 
