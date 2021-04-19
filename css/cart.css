@@ -23,5 +23,36 @@ label {
 }
 
 #invoice {
-    float: right;
+
+    width: 100%;
+    margin-top: 400px;
+    
+}
+
+#cart-form{
+margin-left: 650px;
+margin-top: 200px;
+padding-bottom: 100px;
+}
+
+#purchases-table{
+    margin-bottom: 300px;
+    width: 75%;
+    margin-left: 250px;
+
+}
+
+
+main{
+    padding-bottom: 1000px;
+}
+
+#print{
+  margin-top: 300px;
+  text-align: center;
+  border: 20px;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-weight: bold;
 }
