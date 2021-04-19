@@ -11,6 +11,7 @@
     <script src="https://kit.fontawesome.com/2a1cc42354.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/Images.css">
+    <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/footer.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
@@ -19,9 +20,9 @@
     <header>
         <nav>
             <div class="logo" onclick="window.location.href='../index.html'" style="cursor: pointer;">
-                <img src="../img/products/logo-final.png" width="200px">  
+                <img src="../img/products/logo-final.png" width="200px">
             </div>
-            
+
 
             <ul>
                 <li><a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
@@ -101,18 +102,18 @@
                     Email Address
                 </label><br>
                 <input type="email" id="address1" required><br>
+                <div id="payment">
+                    <input type="radio" id="cash" value="cash" name="payment">
+                    <label for="cash"><i class="fa fa-money" aria-hidden="true" style="color: green;"></i>Cash</label>
+                    <input type="radio" id="visa" value="visa" name="payment">
+                    <label for="visa"><i class="fa fa-cc-visa " aria-hidden="true" style="color: darkgray;"></i>Visa</label>
 
-                <input type="radio" id="cash" value="cash" name="payment">
-                <label for="cash"><i class="fa fa-money" aria-hidden="true" style="color: green;"></i>Cash</label>
-                <input type="radio" id="visa" value="visa" name="payment">
-                <label for="visa"><i class="fa fa-cc-visa " aria-hidden="true" style="color: darkgray;"></i>Visa</label>
-
-                <input type="radio" id="paypal" value="paypal" name="payment">
-                <label for="paypal"><i class="fa fa-paypal " aria-hidden="true"
+                    <input type="radio" id="paypal" value="paypal" name="payment">
+                    <label for="paypal"><i class="fa fa-paypal " aria-hidden="true"
                         style="color: #003087;"></i>PayPal</label><br>
 
-                <input type="submit" value="Confirm" class="submitter">
-
+                    <input type="submit" value="Confirm" class="submitter">
+                </div>
             </fieldset>
         </form>
 
