@@ -139,7 +139,7 @@ function createInvoice(event) {
     payPal = event.target['paypal'].checked;
     cash = event.target['cash'].checked;
     visa = event.target['visa'].checked;
-    swal('Buying', 'Buying complete')
+    swal('Thank you', 'The purchase was completed successfully')
     renderInvoice();
 }
 
