@@ -119,7 +119,8 @@ body {
 
 .logo {
     float: left;
-    margin-top: 15px;
+    /*margin-top: 15px;*/
+    margin-bottom: 30px;
     margin-left: 20px;
 }
 
