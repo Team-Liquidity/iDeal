@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <title>iDeal</title>
-    <link rel="shortcut icon" type="image/x-icon"
-        href="https://assets.whicdn.com/assets/favicon-acfe5c2d81119e375156c82cd638c2baa64f367772c1c93ca3d6e436306e53b1.ico">
+    <link rel="icon" href="../img/duck.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/Index.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/slid-show.css">
     <script src="https://kit.fontawesome.com/2a1cc42354.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/feedback.css">
 </head>
@@ -20,16 +20,16 @@
 
     <header>
         <nav>
-            <div class="logo">
-                <img src="../img/Screenshot__43_-removebg-preview.png" width="200px">
+            <div class="logo" onclick="window.location.href='../index.html'" style="cursor: pointer;">
+                <img src="../img/products/logo-final.png" width="200px">
             </div>
-
+            
             <ul>
                 <li><a href="../index.html"><i class="fa fa-fw fa-home"></i> Home</a></li>
                 <li><a href="pages/products.html"><i class="fa fa-product-hunt" aria-hidden="true"></i> Our Products</a>
                 </li>
                 <li><a href="pages/sell.html"><i class="fa fa-usd" aria-hidden="true"></i> Sell with us</a></li>
-                <li><a href="pages/about-us.html"><i class="fa fa-users" aria-hidden="true"></i> About us</a></li>
+                <li><a href="pages/about_us.html"><i class="fa fa-users" aria-hidden="true"></i> About us</a></li>
             </ul>
             <div id="cart">
                 <ul>
@@ -41,35 +41,62 @@
     </header>
     <hr>
     <main>
-        <div id="home">
-            <img src="img/home-Photo.jpg" alt="" id="home-photo">
-            <h2>
-                PURCHASE LOCAL PRODUCT
-            </h2>
-            <p>
-                Do you like handicrafts. but it is always expensive and worthless? Have you ever
-                thought to shop your handicrafts online through an online site dedicated to that? We offer you many
-                options for home products at an acceptable price, as you can shop products made by charities and
-                professional individuats for this industry.
-            </p>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img/img1.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img/img2.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img/img3.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <br>
+        <h2>
+            PURCHASE LOCAL PRODUCT
+        </h2>
+        <p>
+            Do you like handicrafts. but it is always expensive and worthless? Have you ever thought to shop your handicrafts online through an online site dedicated to that? We offer you many options for home products at an acceptable price, as you can shop products
+            made by charities and professional individuats for this industry.
+        </p>
         </div>
         <hr>
         <div id="feedBackCont">
             <form action="" id="givingFeed">
-                <label for="feedback">Give us a feedback</label><br>
+                <input type="text" id="userName">
+                <label for="feedback">Give a feedback</label><br>
                 <textarea name="" id="" cols="40" rows="10"></textarea>
                 <input type="submit" value="Give Feed back" id="submitter">
             </form>
-
             <fieldset id="feedBack">
                 <legend>Feed-Back's </legend>
-                <p id="feedShow">
-
-                </p>
-
+                <div id="slideShow"></div>
             </fieldset>
         </div>
-
         <hr>
         <link rel="stylesheet" href="/css/rating.css">
         <div class="rate">
@@ -112,9 +139,38 @@
             iDeal &copy;2021
         </p>
     </footer>
-    <script src="js/app.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/render.js"></script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
     <script src="js/feed.js"></script>
 </body>
 

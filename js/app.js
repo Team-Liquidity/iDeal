@@ -1,4 +1,5 @@
 'use strict';
+// swal("Congrats!", ", Your account is created!", "success");
 
 // Add to cart handler
 let price = document.getElementsByClassName('price');
@@ -6,10 +7,9 @@ let addButton = document.getElementsByTagName('button');
 let counter = 0;
 let totalPrice = 0;
 let pictArr = [];
-let priceArr = [];
-let quantityArr = [];
+let productArr = [];
 let getQuantity = 0;
-let total = document.getElementsByClassName('total')[0]; ;
+let total = document.getElementsByClassName('total')[0];;
 
 
 for (let i = 0; i < addButton.length; i++) {
@@ -20,33 +20,38 @@ for (let i = 0; i < addButton.length; i++) {
         let img = document.getElementById('p-' + i).getAttribute('src'); // returns the source of the image 
         pictArr.push(img); //add the product picture to the pictArr
         getQuantity = document.getElementsByClassName('quantity')[i].value; // gets the quantity of bought products
-        quantityArr.push(getQuantity);
+        pictArr.push(getQuantity);
         let getPrice = price[i].getAttribute('value'); //price per product
-        priceArr.push(getPrice); 
+        pictArr.push(getPrice);
         counter += parseInt(getQuantity); // parse the value to an integer
         total.textContent = counter;
         totalPrice += getQuantity * getPrice;
+        pictArr.push(getPrice * getQuantity);
+        productArr.push(pictArr);
+        pictArr = [];
         updateStorage();
-        localStorage.setItem('Quantity counter' , JSON.stringify(counter));
+        localStorage.setItem('Quantity counter', JSON.stringify(counter));
         if (getQuantity > 0) {
-            alert(`You added ${getQuantity} products to the cart`)
+            swal('Done ', `You added ${getQuantity} products to the cart`)
         }
 
     }
 
 }
-total.textContent =localStorage.getItem('Quantity counter');
+total.textContent = localStorage.getItem('Quantity counter');
 
 //################################################################
 function updateStorage() {
     let arrString;
 
-    arrString = JSON.stringify(pictArr);
+    arrString = JSON.stringify(productArr);
     localStorage.setItem('products', arrString);
 
     let totalP = totalPrice;
     localStorage.setItem('total', JSON.stringify(totalP));
+
 }
+
 //###############################################################    
 function getProducts() {
     let data = localStorage.getItem('products');
@@ -134,7 +139,7 @@ function createInvoice(event) {
     payPal = event.target['paypal'].checked;
     cash = event.target['cash'].checked;
     visa = event.target['visa'].checked;
-
+    swal('Thank you', 'The purchase was completed successfully')
     renderInvoice();
 }
 
@@ -157,12 +162,9 @@ function renderInvoice() {
     tableRow.appendChild(document.createElement('td')).textContent = invoiceTotal + ' JOD';
     if (visa) {
         tableRow.appendChild(document.createElement('td')).textContent = 'Visa';
-    }
-    else if (cash) {
+    } else if (cash) {
         tableRow.appendChild(document.createElement('td')).textContent = 'Cash';
-    }
-
-    else {
+    } else {
         tableRow.appendChild(document.createElement('td')).textContent = 'PayPal';
     }
 
@@ -170,4 +172,8 @@ function renderInvoice() {
     localStorage.removeItem('Quantity counter');
     localStorage.removeItem('products');
 
+
 }
+
+
+console.log(totalPrice);
