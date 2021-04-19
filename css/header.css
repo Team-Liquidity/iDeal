@@ -124,6 +124,11 @@ body {
     margin-left: 20px;
 }
 
+.logo img {
+    width: 150px;
+    height: 90px;
+}
+
 h1 {
     display: inline-block;
     font-size: 30px;

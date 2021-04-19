@@ -1,0 +1,27 @@
+form {
+    width: 25%;
+}
+
+fieldset {
+    height: 100%;
+}
+
+#payment input,
+label {
+    display: inline-block;
+}
+
+#purchases-table {
+    float: left;
+}
+
+#purchases-table th {
+    height: 50px;
+    border: 1px solid;
+    border-collapse: separate;
+    border-radius: 0.7rem;
+}
+
+#invoice {
+    float: right;
+}
