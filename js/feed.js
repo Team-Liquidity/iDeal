@@ -17,19 +17,27 @@ function feedSubmiter(event) {
     feedBack.textContent = event.target[1].value;
     feedbacks.push({ userNameInput: userName.textContent, userFeedbackInput: feedBack.textContent })
     localStorage.setItem('userName', JSON.stringify(feedbacks));
-    getFeed()
-}
-
-function getFeed() {
-    //  feedArr = localStorage.getItem('feedBack');
-    nameArr = localStorage.getItem('feedbacks');
-    //  console.log(feedArr);
+  }
+  
+  function getFeed() {
+    let objArr =localStorage.getItem('userName');
+    let nameArr =JSON.parse(objArr);
     console.log(nameArr);
-    document.getElementById('userName').appendChild(document.createElement('span')).textContent = nameArr;
-    //  document.getElementById('userShow').appendChild(document.createElement('span')).textContent=nameArr;
-}
-// function getFeed(){
-//   localStorage.setItem('userName',JSON.stringify(feedbacks)); 
-//   console.log('userName',JSON.stringify(feedbacks));
-//   location();
-// }
+    if(nameArr ){
+      for(let i = 0; i < nameArr.length; i++){
+        let userName = document.createElement('h2');
+        let feedBack = document.createElement('p');
+        container.appendChild(userName);
+        container.appendChild(feedBack);
+        userName.textContent = nameArr [i].userNameInput;
+        feedBack.textContent = nameArr [i].userFeedbackInput; 
+      }
+    }
+    if (feedbacks !== null) {
+      nameArr = feedbacks;
+
+  }
+  return nameArr;
+
+  }
+  getFeed()
