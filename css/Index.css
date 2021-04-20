@@ -1,14 +1,4 @@
-main {
-    box-sizing: border-box;
-    height: fit-content;
-    background-color: white;
-    border: 1px solid white;
-    border-radius: 0.7rem;
-}
 
-#home-photo {
-    width: 100%;
-}
 
 #home p {
     width: 30%;
