@@ -11,15 +11,15 @@ function render (){
     imgContainer.appendChild(fieldSet);
     let imgElmt = document.createElement('img');
     console.log(imgElmt);
-    imgElmt.setAttribute('src' , objNewSales[0].img);
+    imgElmt.setAttribute('src' , objNewSales[i].img);
     fieldSet.appendChild(imgElmt);
     
     let description = document.createElement('p');
-    description.textContent = objNewSales[0].description;
+    description.textContent = objNewSales[i].description;
     fieldSet.appendChild(description);
     
     let priceLabel = document.createElement('label');
-    priceLabel.textContent = objNewSales[0].price + ' JOD';
+    priceLabel.textContent = objNewSales[i].price + ' JOD';
     fieldSet.appendChild(priceLabel);
     
     let quantityInput = document.createElement('input');
