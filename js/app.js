@@ -10,7 +10,7 @@ let pictArr = [];
 let productArr = [];
 let getQuantity = 0;
 let total = document.getElementsByClassName('total')[0];;
-
+let totalP = 0;
 
 for (let i = 0; i < addButton.length; i++) {
     addButton[i].addEventListener('click', addToCart);
@@ -30,7 +30,6 @@ for (let i = 0; i < addButton.length; i++) {
         productArr.push(pictArr);
         pictArr = [];
         updateStorage();
-        localStorage.setItem('Quantity counter', JSON.stringify(counter));
         if (getQuantity > 0) {
             swal('Done ', `You added ${getQuantity} products to the cart`)
         }
@@ -43,25 +42,24 @@ total.textContent = localStorage.getItem('Quantity counter');
 //################################################################
 function updateStorage() {
     let arrString;
-
     arrString = JSON.stringify(productArr);
     localStorage.setItem('products', arrString);
-
-    let totalP = totalPrice;
+    localStorage.setItem('Quantity counter',counter);
+    totalP += totalPrice;
     localStorage.setItem('total', JSON.stringify(totalP));
-
 }
 
 //###############################################################    
 function getProducts() {
     let data = localStorage.getItem('products');
     let productsdata = JSON.parse(data);
-
+    if(totalPrice != 0) {
+        totalP += totalPrice
+    }
     if (productsdata !== null) {
         productArr = productsdata;
 
     }
-    return productArr;
 
 }
 //let productsdata=getProducts();
@@ -157,9 +155,9 @@ function renderInvoice() {
 
     tableRow.appendChild(document.createElement('td')).textContent = address;
 
-    tableRow.appendChild(document.createElement('td')).textContent = itemQuantity + ' Products';
+    tableRow.appendChild(document.createElement('td')).textContent = quantityTotal + ' Products';
 
-    tableRow.appendChild(document.createElement('td')).textContent = invoiceTotal + ' JOD';
+    tableRow.appendChild(document.createElement('td')).textContent = priceTotal + ' JOD';
     if (visa) {
         tableRow.appendChild(document.createElement('td')).textContent = 'Visa';
     } else if (cash) {
@@ -170,7 +168,7 @@ function renderInvoice() {
 
     localStorage.removeItem('products');
     localStorage.removeItem('Quantity counter');
-    localStorage.removeItem('products');
+    localStorage.removeItem('total');
 
 
 }

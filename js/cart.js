@@ -32,7 +32,8 @@
 
 let ourProducts = localStorage.getItem('products');
 let imgProducts = JSON.parse(ourProducts);
-
+let priceTotal = 0;
+let quantityTotal = 0;
 
 let productsEl = document.getElementById('purchases-table');
 function cartRendering() {
@@ -52,9 +53,11 @@ function cartRendering() {
     tableDataPrice.textContent = products[i][2] + ' JOD';
     let tableDataQuantity = tableRow.appendChild(document.createElement('td'));
     tableDataQuantity.textContent = products[i][1] + ' Product/s';
+    quantityTotal += parseInt(products[i][1]);
     let tableDataTotal = tableRow.appendChild(document.createElement('td'));
     tableDataTotal.textContent = products[i][3] + ' JOD' ;
-    }
+    priceTotal += parseInt(products[i][3]);
+}
     }
 
 }
