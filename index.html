@@ -21,21 +21,21 @@
             <img src="img/logo.png" alt="" class="logo">
             <ul class="cart">
                 <li>
-                    <a href="">Cart</a>
+                    <a href="pages/cart.html">Cart <sup class="total"></sup></a>
                 </li>
             </ul>
             <ul class="nav-bar">
                 <li>
-                    <a href="">Home</a>
+                    <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="">Products</a>
+                    <a href="pages/products.html">Products</a>
                 </li>
                 <li>
-                    <a href="">Sell With Us</a>
+                    <a href="pages/sell.html">Sell With Us</a>
                 </li>
                 <li>
-                    <a href="">About Us</a>
+                    <a href="pages/about_us.html">About Us</a>
                 </li>
             </ul>
             <h1>
@@ -78,12 +78,10 @@
                 <div class="text">Mohammed Three</div>
             </div>
 
-            <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <br>
 
-            <!-- The dots/circles -->
             <div style="width: 57%; text-align: center; clear: both;">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
@@ -100,11 +98,40 @@
             made by charities and professional individuats for this industry.
         </p>
         </div>
+        <div class="circular">
+            <img src="img/products/p-0-b.jpg" alt="">
+            <img src="img/products/p-1-b.jpg" alt="">
+            <img src="img/products/p-2-b.jpg" alt="">
+        </div>
         <div id="feedBackCont">
             <form action="" id="givingFeed">
-                <input type="text" id="userName">
                 <label for="feedback">Give a feedback</label><br>
-                <textarea name="" id="" cols="40" rows="10"></textarea>
+                <label for="userName">Your Name</label><br>
+                <input type="text" id="userName"><br>
+                <div class="rate">
+
+                    <input type="radio" id="star5" name="rate" value="5" />
+        
+                    <label for="star5" title="text">5 </label>
+        
+                    <input type="radio" id="star4" name="rate" value="4" />
+        
+                    <label for="star4" title="text">4 </label>
+        
+                    <input type="radio" id="star3" name="rate" value="3" />
+        
+                    <label for="star3" title="text">3 </label>
+        
+                    <input type="radio" id="star2" name="rate" value="2" />
+        
+                    <label for="star2" title="text">2 </label>
+        
+                    <input type="radio" id="star1" name="rate" value="1" />
+        
+                    <label for="star1" title="text">1 </label><br>
+        
+                </div>
+                <textarea name="" id="" cols="40" rows="10"></textarea><br>
                 <input type="submit" value="Give Feed back" id="submitter">
             </form>
             <fieldset id="feedBack">
@@ -113,29 +140,7 @@
             </fieldset>
         </div>
         <link rel="stylesheet" href="/css/rating.css">
-        <div class="rate">
 
-            <input type="radio" id="star5" name="rate" value="5" />
-
-            <label for="star5" title="text">5 </label>
-
-            <input type="radio" id="star4" name="rate" value="4" />
-
-            <label for="star4" title="text">4 </label>
-
-            <input type="radio" id="star3" name="rate" value="3" />
-
-            <label for="star3" title="text">3 </label>
-
-            <input type="radio" id="star2" name="rate" value="2" />
-
-            <label for="star2" title="text">2 </label>
-
-            <input type="radio" id="star1" name="rate" value="1" />
-
-            <label for="star1" title="text">1 </label><br>
-
-        </div>
 
     </main>
     <hr>

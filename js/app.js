@@ -58,10 +58,10 @@ function getProducts() {
     let productsdata = JSON.parse(data);
 
     if (productsdata !== null) {
-        pictArr = productsdata;
+        productArr = productsdata;
 
     }
-    return productsdata;
+    return productArr;
 
 }
 //let productsdata=getProducts();
