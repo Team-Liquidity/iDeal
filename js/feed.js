@@ -16,6 +16,9 @@ function feedSubmiter(event) {
     userName.textContent = event.target[0].value;
     feedBack.textContent = event.target[1].value;
     feedbacks.push({ userNameInput: userName.textContent, userFeedbackInput: feedBack.textContent })
+    console.log('userName',userName);
+    console.log('feedBack',feedBack);
+
     localStorage.setItem('userName', JSON.stringify(feedbacks));
   }
   
@@ -41,3 +44,5 @@ function feedSubmiter(event) {
 
   }
   getFeed()
+
+  
