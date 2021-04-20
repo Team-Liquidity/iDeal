@@ -6,7 +6,7 @@
     <title>iDeal</title>
     <link rel="icon" href="../img/duck.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/Index.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -18,31 +18,44 @@
 <body>
 
     <header>
-        <nav>
-            <img src="img/logo.png" alt="" class="logo">
+        <!--    Made by Erik Terwan    -->
+        <!--   24th of November 2015   -->
+        <!--        MIT License        -->
+        <nav role="navigation">
             <ul class="cart">
                 <li>
                     <a href="pages/cart.html">Cart <sup class="total"></sup></a>
                 </li>
             </ul>
-            <ul class="nav-bar">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="pages/products.html">Products</a>
-                </li>
-                <li>
-                    <a href="pages/sell.html">Sell With Us</a>
-                </li>
-                <li>
-                    <a href="pages/about_us.html">About Us</a>
-                </li>
-            </ul>
+            <img src="img/logo.png" alt="" class="logo">
+            <div id="menuToggle">
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li><br>
+                    <li>
+                        <a href="pages/products.html">Products</a>
+                    </li>
+                    <li>
+                        <a href="pages/sell.html">Sell With Us</a>
+                    </li>
+                    <li>
+                        <a href="pages/about_us.html">About Us</a>
+                    </li>
+                    </a>
+                </ul>
+
+            </div>
             <h1>
                 <span class="letter">i</span> Deal
             </h1>
-            </div>
+
         </nav>
     </header>
     <main>
@@ -92,7 +105,8 @@
             <img src="img/products/p-1-b.jpg" alt="">
             <img src="img/products/p-2-b.jpg" alt="">
         </div>
-        <fieldset id="feedBackCont" style="font-family: cursive; font :bold"><legend>Feedback Area</legend>
+        <fieldset id="feedBackCont" style="font-family: cursive; font :bold">
+            <legend>Feedback Area</legend>
             <div>
             <form action="" id="givingFeed">
                 <label for="feedback">  </label><br>
