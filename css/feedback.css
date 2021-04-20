@@ -32,7 +32,7 @@ fieldset legend {
     color: rgb(251, 251, 251);
     font-family: cursive;
     font-size: bold;
-    background-color: rgb(154, 162, 167);
+    background-color: rgb(0 15 22);
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -63,41 +63,49 @@ fieldset legend:hover {
     font-weight: bold;
     position: relative;
     left: 37%;
+    transition: width 4s
  }
 
 #submitter:hover{
-    background-color: darkgrey;
+    background-color: #141220;
+    color: white;
    font-family: cursive;
    font-weight: bolder;
    box-shadow: 3px 3px 2px 1px rgba(37, 129, 72, 0.39);
    border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;    
+    border-bottom-left-radius: 10px;   
+    width: 150px;
+    height: 35px;
+    
 }
 #slideShow{
     box-shadow: 3px 3px 2px 1px rgba(45, 53, 48, 0.39);
-    background-color: rgba(169, 169, 169, 0.315);
+    background-color: rgba(246, 240, 240, 0.315);
 
 }
 #slideShow h2{
     width: auto;
-    box-shadow: 3px 3px 2px 1px rgba(7, 6, 6, 0.329);
-    
+    color: black;   
+}
+#slideShow p{
+    color: #080047;
+    box-shadow: 3px 3px 2px 1px rgb(119 121 131 / 16%);
 }
 #textArea{
     width: 57%;
     height: 257px;
-    box-shadow: 3px 3px 2px 1px rgba(209, 197, 197);
+    box-shadow: 3px 3px 2px 1px rgb(0 15 22);
     border-top-right-radius: 33px;
     border-bottom-right-radius: 33px;
     border-bottom-left-radius: 33px;  
-    background-color: rgba(170, 160, 160, 0.185);
+    background-color: rgb(248 146 110 / 23%);
 }
 #userName{
     position: relative;
     left: 52px;
     margin: 15px;
-    box-shadow: 3px 3px 2px 1px rgb(209, 197, 197);
+    box-shadow: 3px 3px 2px 1px rgb(0 15 22);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 10px;   
