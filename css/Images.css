@@ -1,21 +1,26 @@
 
  #img-main img{
-    width: 350px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     display: block;
     border-radius: 7px;
-    margin-top: 5px;
+  /*  margin-top: 5px;*/
+    text-align: center;
+    margin: 10px;
 }
 
 
-#img-main{
- /*   width: 27%;
-    margin: 0 auto;*/
+/*#img-main{
+    width: 27%;
+    margin: 0 auto;
     background-color:#f4f9f9 ;
 
-}
+}*/
 input{
     display: block;
+}
+#img-container img{
+    text-align: center;
 }
 
 #img-container p{
@@ -29,12 +34,21 @@ input{
 
 #img-container input{
     margin: 0 auto;
+    height: 30px;
+    width: 250px;
 }
 
 #img-container button {
-    width: 10%;
+    /*width: 10%;
     margin-left: 45%;
-    margin-bottom: 15px;
+    margin-bottom: 15px;*/
+      text-align: center;
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    margin: 15px;
+    margin-left: 150px;
+    font-weight: bold;
     
 
 }
@@ -47,20 +61,68 @@ fieldset {
     background-color: white;
     border-radius: 10px;
     width: 400px;
-    height: 450px;
+    height: 700px;
 }
+
 #cart-main{
     height: 500px;
 }
 #cart-form{
     height: 500px;
 }
+p{
+    font-size: 25px;
+    font-weight: bold;
+}
+label{
+    font-size: 25px;
+    font-weight: bold;
+}
+
 
 #img-container{
     display: grid;
-    grid-template-columns: 4fr 4fr 4fr 4fr;
+    grid-template-columns: 4fr 4fr 4fr ;
+    grid-gap: 20px;
+    justify-content: center;
+    align-content: center;
+    margin-left: 100px;
+    margin-top: 50px;
+   
 }
-#new-product{
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr 4fr;
+.fieldset-shadow{
+    box-shadow: 12px 12px 2px 1px rgba(37, 129, 72, 0.39);
+}
+
+label{
+    text-align: center;
+}
+
+.style-botton {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(179, 71, 0);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+
+}
+
+.style-botton:hover {
+    background-color: rgb(255, 102, 0);
+}
+
+.style-botton {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
