@@ -14,7 +14,7 @@ function ProductNew(name, phoneNumber, description, price, img) {
 
 }
 ProductNew.objNewProduct = [];
-new ProductNew('new', '0777-7777-777', 'hi', '20', '../img/new-products/images (1).jpg');
+new ProductNew('tree', '0777-7777-777', 'tree', '40', '../img/new-products/images (1).jpg');
 new ProductNew('picture', '0777-7777-777', 'picture-wall', '20', '../img/new-products/images (2).jpg');
 new ProductNew('new', '0777-7777-777', 'hi', '20', '../img/new-products/images (3).jpg');
 new ProductNew('Dream catcher', '0777-7777-777', 'Dream catcher', '10', '../img/new-products/images (4).jpg');
@@ -52,7 +52,7 @@ function getProducts() {
 }
 
 getProducts();
-let imgElement = document.getElementById('new-product');
+let imgElement = document.getElementById('img-container');
 
 function renderNewProduct() {
     for (let i = 0; i < ProductNew.objNewProduct.length; i++) {
