@@ -13,6 +13,7 @@ width: 40%;
 #feedBackCont {
     display: inline-block;
     width: 100%;
+    background-color: #c4cedf66e;
 }
 
 #feedBack {
@@ -20,28 +21,89 @@ width: 40%;
     width: 29%;
     height: 228px;
     border-radius: 8px;
+    box-shadow: 5px 5px 2px 1px rgba(37, 129, 72, 0.39);
+    margin: auto;
+    height: 372px;
 }
+
 
 fieldset legend {
-    background-color: #fcd1d1;
-    height: 22px;
-    font-size: bold;
-    text-size-adjust: bold;
-    border-radius: 10px;
-}
-
-fieldset legend:hover {
+    
     color: rgb(251, 251, 251);
     font-family: cursive;
     font-size: bold;
     background-color: rgb(154, 162, 167);
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    height: 25px;
+    /* box-shadow:5px 5px 2px 1px rgba(37, 129, 72, 0.39) ; */
+}
+
+fieldset legend:hover {
+    background-color: #383434;
+    height: 22px;
+    font-size: bolder;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow:5px 5px 2px 1px rgba(37, 129, 72, 0.39) ;
+ 
+    border-top-left-radius: 10px;
 }
 
 #feedshow {
     width: 20%;
     overflow: scroll;
-} */
-/* .rate {
-    position: static;
-    float: right;
-} */
+} 
+#submitter{
+    height: 25px;
+    color: darkblue;
+    height: 30px;
+    font-weight: bold;
+    position: relative;
+    left: 37%;
+ }
+
+#submitter:hover{
+    background-color: darkgrey;
+   font-family: cursive;
+   font-weight: bolder;
+   box-shadow: 3px 3px 2px 1px rgba(37, 129, 72, 0.39);
+   border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;    
+}
+#slideShow{
+    box-shadow: 3px 3px 2px 1px rgba(45, 53, 48, 0.39);
+    background-color: rgba(169, 169, 169, 0.315);
+
+}
+#slideShow h2{
+    width: auto;
+    box-shadow: 3px 3px 2px 1px rgba(7, 6, 6, 0.329);
+    
+}
+#textArea{
+    width: 57%;
+    height: 257px;
+    box-shadow: 3px 3px 2px 1px rgba(209, 197, 197);
+    border-top-right-radius: 33px;
+    border-bottom-right-radius: 33px;
+    border-bottom-left-radius: 33px;  
+    background-color: rgba(170, 160, 160, 0.185);
+}
+#userName{
+    position: relative;
+    left: 52px;
+    margin: 15px;
+    box-shadow: 3px 3px 2px 1px rgb(209, 197, 197);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 10px;   
+}
+#name{
+    position: relative;
+    left: 110px;
+    text-shadow: 0 0 #080047;
+}
