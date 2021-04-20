@@ -39,6 +39,9 @@
     cursor:pointer;
     transition: 400ms;
 }
+.profile .profile-img:hover{
+    border-radius: 45px;
+}
 .profile:hover .profile-img{
     filter:grayscale(0);
 }
