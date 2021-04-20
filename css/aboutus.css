@@ -41,6 +41,7 @@
 }
 .profile .profile-img:hover{
     border-radius: 45px;
+    box-shadow:5px 5px 2px 1px rgba(78, 76, 76, 0.349) ;
 }
 .profile:hover .profile-img{
     filter:grayscale(0);

@@ -92,13 +92,15 @@
             <img src="img/products/p-1-b.jpg" alt="">
             <img src="img/products/p-2-b.jpg" alt="">
         </div>
-        <fieldset>
-        <div id="feedBackCont">
+        <fieldset id="feedBackCont" style="font-family: cursive; font :bold"><legend>Feedback Area</legend>
+            <div>
             <form action="" id="givingFeed">
-                <label for="feedback">Give a feedback</label><br>
-                <label for="userName">Your Name</label><br>
-                <input type="text" id="userName"><br>
-                <textarea name="" id="" cols="40" rows="10"></textarea><br>
+                <label for="feedback">  </label><br>
+                <label for="userName" id="name">Your Name</label>
+                <br>
+                <input type="text" id="userName">
+                <br>
+                <textarea name="" id="textArea" cols="40" rows="10"></textarea><br>
                 <input type="submit" value="Give Feed back" id="submitter">
             </form>
             <fieldset id="feedBack">
@@ -106,9 +108,7 @@
                 <div id="slideShow"></div>
             </fieldset>
         </div>
-        <div class="rate">        avgRating.push('5')
-
-            
+        <div class="rate">        
             <input type="radio" id="star5" name="rate" value="5" />
             
             <label for="star5" title="text">5 </label>
@@ -128,8 +128,8 @@
             <input type="radio" id="star1" name="rate" value="1" />
             
             <label for="star1" title="text">1 </label><br>
-            
-        </div>
+         </div>   
+        
         <link rel="stylesheet" href="/css/feedback.css">
         <link rel="stylesheet" href="/css/rating.css">
        
