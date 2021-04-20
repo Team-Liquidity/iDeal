@@ -2,12 +2,7 @@
 .chacked{
     color: blue;
 }
-.rate {
-    top: 347px;
-    padding: 5 30px;
-    position: relative;
-    right: 50%;
-}
+
 .rate:not(:checked) > input {
     position:absolute;
     top: auto;
@@ -22,7 +17,7 @@
     white-space:nowrap;
     cursor:pointer;
     font-size:40px;
-    color:rgb(255, 190, 190);
+    color: #141220;
 }
 .rate:not(:checked) > label:before {
     content: '★';
