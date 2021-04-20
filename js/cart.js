@@ -1,179 +1,80 @@
-'use strict';
-// swal("Congrats!", ", Your account is created!", "success");
-
-// Add to cart handler
-let price = document.getElementsByClassName('price');
-let addButton = document.getElementsByTagName('button');
-let counter = 0;
-let totalPrice = 0;
-let pictArr = [];
-let productArr = [];
-let getQuantity = 0;
-let total = document.getElementsByClassName('total')[0];;
-
-
-for (let i = 0; i < addButton.length; i++) {
-    addButton[i].addEventListener('click', addToCart);
-
-
-    function addToCart(event) {
-        let img = document.getElementById('p-' + i).getAttribute('src'); // returns the source of the image 
-        pictArr.push(img); //add the product picture to the pictArr
-        getQuantity = document.getElementsByClassName('quantity')[i].value; // gets the quantity of bought products
-        pictArr.push(getQuantity);
-        let getPrice = price[i].getAttribute('value'); //price per product
-        pictArr.push(getPrice);
-        counter += parseInt(getQuantity); // parse the value to an integer
-        total.textContent = counter;
-        totalPrice += getQuantity * getPrice;
-        pictArr.push(getPrice * getQuantity);
-        productArr.push(pictArr);
-        pictArr = [];
-        updateStorage();
-        localStorage.setItem('Quantity counter', JSON.stringify(counter));
-        if (getQuantity > 0) {
-            swal('Done ', `You added ${getQuantity} products to the cart`)
-        }
-
-    }
-
-}
-total.textContent = localStorage.getItem('Quantity counter');
-
-//################################################################
-function updateStorage() {
-    let arrString;
-
-    arrString = JSON.stringify(productArr);
-    localStorage.setItem('products', arrString);
-
-    let totalP = totalPrice;
-    localStorage.setItem('total', JSON.stringify(totalP));
-
-}
-
-//###############################################################    
-function getProducts() {
-    let data = localStorage.getItem('products');
-    let productsdata = JSON.parse(data);
-
-    if (productsdata !== null) {
-        pictArr = productsdata;
-
-    }
-    return productsdata;
-
-}
-//let productsdata=getProducts();
-//getProducts();
-//console.log(productsdata);
-//################################################################
-
+// let table = document.getElementById('purchases-table');
+// table.appendChild(firstRow);
+// function renderTable() {
+//     let 
+//     let tdImg = document.createElement('td');
+//     firstRow.appendChild(tdImg);
+//     tdImg.textContent = pictArr.img;
+//     let thPrice = document.createElement('td');
+//     firstRow.appendChild(thPrice);
+//     thPrice.textContent = pictArr.getPrice;
+//     let thQuantity = document.createElement('td');
+//     firstRow.appendChild(thQuantity);
+//     thQuantity.textContent =pictArr.getQuantity;
+//     let thtotal = document.createElement('td');
+//     firstRow.appendChild(thtotal);
+//     thtotal.textContent = pictArr.total;
+// }
+// let imagelement = 0;
 // function cartRendering() {
 //     let productsEl = document.getElementById('cart-product');
 //     for (let i = 0; i < pictArr.length; i++) {
-
-//         let imagelement = document.createElement('img');
+//         imagelement = document.createElement('img');
 //         imagelement.setAttribute('width', '200px');
 //         imagelement.setAttribute('height', '200px');
 //         productsEl.appendChild(imagelement);
-//         imagelement.setAttribute('src', pictArr[i]);
-
+//         imagelement= imagelement.setAttribute('src', pictArr[i]);
 //     }
 // }
-
-
-
-
-// function renderTable() {
-//     let parent = document.getElementById('table-product');
-//     let table = document.createElement('table');
-//     parent.appendChild(table);
-
-
-
-//     let firstRow = document.createElement('tr');
-//     table.appendChild(firstRow);
-//     let thPrice = document.createElement('th');
-//     firstRow.appendChild(thPrice);
-//     thPrice.textContent = 'Price';
-
-//     let thProductPrice = document.createElement('th');
-//     firstRow.appendChild(thProductPrice);
-//     thProductPrice.textContent = localStorage.getItem('price');
-
-//     let secondRow = document.createElement('tr');
-//     table.appendChild(secondRow);
-//     secondRow.textContent = 'Quantity';
-
-
-// }
-
-
-
+// getProducts();
+// cartRendering(); 
 // renderTable();
 
+let ourProducts = localStorage.getItem('products');
+let imgProducts = JSON.parse(ourProducts);
 
 
-
-
-getProducts();
-// cartRendering();
-
-
-
-let purchaseForm = document.getElementById('cart-form');
-purchaseForm.addEventListener('submit', createInvoice);
-let fullName = '';
-let phoneNumber = '';
-let address = '';
-let payPal = '';
-let cash = '';
-let visa = '';
-
-function createInvoice(event) {
-    event.preventDefault();
-    fullName = event.target['name'].value;
-    phoneNumber = event.target['number'].value;
-    address = event.target['address1'].value;
-    payPal = event.target['paypal'].checked;
-    cash = event.target['cash'].checked;
-    visa = event.target['visa'].checked;
-    swal('Thank you', 'The purchase was completed successfully')
-    renderInvoice();
-}
-
-let tablePaernt = document.getElementById('invoice')
-
-
-function renderInvoice() {
-    let itemQuantity = localStorage.getItem('Quantity counter');
-    let invoiceTotal = localStorage.getItem('total');
-    let tableRow = tablePaernt.appendChild(document.createElement('tr'));
-
-    tableRow.appendChild(document.createElement('td')).textContent = fullName;
-
-    tableRow.appendChild(document.createElement('td')).textContent = phoneNumber;
-
-    tableRow.appendChild(document.createElement('td')).textContent = address;
-
-    tableRow.appendChild(document.createElement('td')).textContent = itemQuantity + ' Products';
-
-    tableRow.appendChild(document.createElement('td')).textContent = invoiceTotal + ' JOD';
-    if (visa) {
-        tableRow.appendChild(document.createElement('td')).textContent = 'Visa';
-    } else if (cash) {
-        tableRow.appendChild(document.createElement('td')).textContent = 'Cash';
-    } else {
-        tableRow.appendChild(document.createElement('td')).textContent = 'PayPal';
+let productsEl = document.getElementById('purchases-table');
+function cartRendering() {
+    let productsString = localStorage.getItem('products');
+    let products = JSON.parse(productsString);
+    console.log(products);
+    for (let i = 0 ; i < products.length ; i++){
+    for(let i = 0 ; i < products[i].length ; i++) {
+        let tableRow = productsEl.appendChild(document.createElement('tr'));
+    let productImage = document.createElement('img');
+    let tableDataImg = tableRow.appendChild(document.createElement('td'));
+    tableDataImg.appendChild(productImage);
+    productImage.setAttribute('src' , products[i][0]);
+    productImage.setAttribute('width' , '100px');
+    productImage.setAttribute('height' , '100px');
+    let tableDataPrice = tableRow.appendChild(document.createElement('td'));
+    tableDataPrice.textContent = products[i][2] + ' JOD';
+    let tableDataQuantity = tableRow.appendChild(document.createElement('td'));
+    tableDataQuantity.textContent = products[i][1] + ' Product/s';
+    let tableDataTotal = tableRow.appendChild(document.createElement('td'));
+    tableDataTotal.textContent = products[i][3] + ' JOD' ;
+    }
     }
 
-    localStorage.removeItem('products');
-    localStorage.removeItem('Quantity counter');
-    localStorage.removeItem('products');
-
-
 }
 
+cartRendering();
 
-console.log(totalPrice);
+
+// gettingItemsCart();
+// function gettingItemsCart() {    
+//     let getItems = localStorage.getItem('quantityEach');
+//     let stringObj = JSON.parse(getItems);
+//     console.log(stringObj);
+//     if (stringObj) {
+//         quantityArr = stringObj;
+//     }
+
+//     let getItems2 = localStorage.getItem('priceEach');
+//     let stringObj2 = JSON.parse(getItems2);
+//     console.log(stringObj2);
+//     if (stringObj2) {
+//         priceArr = stringObj2;
+//     }
+// }
