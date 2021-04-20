@@ -76,10 +76,11 @@ function renderNewProduct() {
         fieldSet.appendChild(quantityInput);
 
         let plusButton = document.createElement('button');
-        plusButton.textContent = '+';
+        plusButton.textContent = 'Add to Cart';
         fieldSet.appendChild(plusButton);
     }
 }
 
 
 renderNewProduct();
+
