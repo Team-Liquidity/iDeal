@@ -97,7 +97,8 @@ footer p{
     margin: 0;
 } */
 
-body {
+
+/* /* body {
     margin: 2% 5%;
     background-color: #f4f9f9;
     font-family: 'PT Sans', sans-serif;
@@ -106,13 +107,9 @@ body {
 .logo {
     float: left;
     /*margin-top: 15px;*/
-    margin-bottom: 30px;
-    margin-left: 20px;
-    margin-bottom: 30px;
-    padding-bottom: 20px;
-}
 
-.logo img {
+
+/* .logo img {
     width: 150px;
     height: 90px;
 }
@@ -177,9 +174,14 @@ body hr {
     margin: 40px auto 40px auto;
 }
 
-.swal-overlay {
+*/
+
+*
+/* .swal-overlay {
     background-color: rgba(189, 212, 214, 0.486);
 }
+
+*/
 
 .swal-title {
     margin: 0px;
@@ -202,4 +204,43 @@ body hr {
     font-size: 12px;
     border: 1px solid #390279;
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.37);
+}
+
+nav {
+    height: 700px;
+    background-image: url(/img/nav.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+}
+
+nav img {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+nav li {
+    display: inline-block;
+    padding: 25px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 150px;
+    clear: both;
+    width: 35%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
 }
