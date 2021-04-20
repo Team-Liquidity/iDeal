@@ -9,8 +9,8 @@
 
 
 #img-main{
-    width: 27%;
-    margin: 0 auto;
+ /*   width: 27%;
+    margin: 0 auto;*/
     background-color:#f4f9f9 ;
 
 }
@@ -43,13 +43,24 @@ input{
     width: 10%;
 }
 fieldset {
-    margin-bottom: 15px;
+    margin: 15px;
     background-color: white;
     border-radius: 10px;
+    width: 400px;
+    height: 450px;
 }
 #cart-main{
     height: 500px;
 }
 #cart-form{
     height: 500px;
+}
+
+#img-container{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 4fr;
+}
+#new-product{
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 4fr;
 }
