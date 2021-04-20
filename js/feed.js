@@ -16,7 +16,7 @@ function feedSubmiter(event) {
     container.appendChild(feedBack);
     userName.textContent = event.target[0].value;
     feedBack.textContent = event.target[1].value;
-    feedbacks.push({ userNameInput: userName.textContent, userFeedbackInput: feedBack.textContent,rating: localStorage.getItem('rating') })
+    feedbacks.push({ userNameInput: userName.textContent, userFeedbackInput: feedBack.textContent})
     console.log('userName',userName);
     console.log('feedBack',feedBack);
 
@@ -26,11 +26,15 @@ function feedSubmiter(event) {
   function getFeed() {
     let objArr =localStorage.getItem('userName');
     let nameArr =JSON.parse(objArr);
+    let stringRate =localStorage.getItem('rating');
+    let objRate =JSON.parse(stringRate);
+    console.log(objRate);
     console.log(nameArr);
     if(nameArr ){
       for(let i = 0; i < nameArr.length; i++){
         let userName = document.createElement('h2');
         let feedBack = document.createElement('p');
+        let ratingElement = document.createElement('p');
         container.appendChild(userName);
         container.appendChild(feedBack);
         
