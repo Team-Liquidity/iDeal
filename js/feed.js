@@ -4,6 +4,7 @@ feedBackButton.addEventListener('submit', feedSubmiter);
 let userInput = document.getElementById('userName');
 userInput.addEventListener('submit', feedSubmiter);
 let feedbacks = [];
+
 // #################### function submiter feedBack ###########
 let container = document.getElementById('slideShow');
 
@@ -15,7 +16,7 @@ function feedSubmiter(event) {
     container.appendChild(feedBack);
     userName.textContent = event.target[0].value;
     feedBack.textContent = event.target[1].value;
-    feedbacks.push({ userNameInput: userName.textContent, userFeedbackInput: feedBack.textContent })
+    feedbacks.push({ userNameInput: userName.textContent, userFeedbackInput: feedBack.textContent,rating: localStorage.getItem('rating') })
     console.log('userName',userName);
     console.log('feedBack',feedBack);
 
@@ -32,11 +33,12 @@ function feedSubmiter(event) {
         let feedBack = document.createElement('p');
         container.appendChild(userName);
         container.appendChild(feedBack);
+        
         userName.textContent = nameArr [i].userNameInput;
         feedBack.textContent = nameArr [i].userFeedbackInput; 
       }
     }
-    if (feedbacks !== null) {
+      if (feedbacks !== null) {
       nameArr = feedbacks;
 
   }
@@ -44,5 +46,6 @@ function feedSubmiter(event) {
 
   }
   getFeed()
+
 
   

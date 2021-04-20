@@ -1,0 +1,37 @@
+#abdulmajjed{
+ 
+   opacity: 1;
+   transition: .5s ease;
+   backface-visibility: hidden;    
+   border-radius: 122px;
+}
+#abdulmajjed:hover{
+    opacity: 0.6;
+    border-radius: 50px;
+  }
+.middle {
+    transition: 0.7s ease;
+    opacity: 0;
+    position: absolute;
+    top: 167%;
+    left: 6%;
+    transform: translate(-58%, -139%);
+ }
+  
+  
+/* .container:hover .image {
+    opacity: 0.3;
+  } */
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: lightslategrey;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    border-radius: 13px;
+}
+  
