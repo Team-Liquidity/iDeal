@@ -6,11 +6,12 @@
     <title>iDeal</title>
     <link rel="icon" href="../img/duck.png" type="image/png">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/slid-show.css">
+    <link rel="stylesheet" href="css/alert.css">
     <script src="https://kit.fontawesome.com/2a1cc42354.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/feedback.css">
 </head>
@@ -18,58 +19,70 @@
 <body>
 
     <header>
-        <nav>
-            <img src="img/logo.png" alt="" class="logo">
-            <ul class="cart">
-                <li>
-                    <a href="pages/cart.html">Cart <sup class="total"></sup></a>
-                </li>
-            </ul>
-            <ul class="nav-bar">
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="pages/products.html">Products</a>
-                </li>
-                <li>
-                    <a href="pages/sell.html">Sell With Us</a>
-                </li>
-                <li>
-                    <a href="pages/about_us.html">About Us</a>
-                </li>
-            </ul>
+        <div class="nav">
+            <h2>Team Liquidity</h2>
+            <div id="menuToggle">
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li><br>
+                    <li>
+                        <a href="pages/products.html">Products</a>
+                    </li>
+                    <li>
+                        <a href="pages/sell.html">Sell With Us</a>
+                    </li>
+                    <li>
+                        <a href="pages/about_us.html">About Us</a>
+                    </li>
+                    <ul class="cart">
+                        <li>
+                            <a href="pages/cart.html"><i class="fas fa-shopping-cart fa-2x"
+                                    style="color: white;"></i> <sup class="total"></sup></a>
+                        </li>
+                    </ul>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <nav role="navigation">
             <h1>
                 <span class="letter">i</span> Deal
             </h1>
-            </div>
+            <p>Your way to Craft</p>
         </nav>
     </header>
     <main>
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
-                <img src="img/img1.jpg" style="width:100%">
-                <div class="text">Mohammed 1 </div>
+                <img src="img/img1.jpeg" style="width:100%">
+                <div class="text">Hand Crafts</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">2 / 3</div>
-                <img src="img/img2.jpg" style="width:100%">
-                <div class="text">Mohammed Two</div>
+                <img src="img/img2.jpeg" style="width:100%">
+                <div class="text">Art Crafts</div>
             </div>
 
             <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
-                <img src="img/img3.jpg" style="width:100%">
-                <div class="text">Mohammed Three</div>
+                <img src="img/img3.jpeg" style="width:100%">
+                <div class="text">Home made Products</div>
             </div>
 
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
             <br>
 
-            <div style="width: 57%; text-align: center; clear: both;">
+            <div style="width: 100%; text-align: center; clear: both;">
                 <span class="dot" onclick="currentSlide(1)"></span>
                 <span class="dot" onclick="currentSlide(2)"></span>
                 <span class="dot" onclick="currentSlide(3)"></span>
@@ -78,21 +91,47 @@
         </div>
         <div class="home-desc">
             <h2>
-                PURCHASE LOCAL PRODUCT
+                Why customers choose store?
             </h2>
             <p>
-                Do you like handicrafts. but it is always expensive and worthless? Have you ever thought to shop your
-                handicrafts online through an online site dedicated to that? We offer you many options for home products
-                at an acceptable price, as you can shop products
-                made by charities and professional individuats for this industry.
+                We are offering countless collection with affordable prices for the local stores craft products, to
+                encourage our local community charities to sell their products online. Since many of them do not have
+                the capital to start their own websites, in this way many charities will be able to display their
+                products online.
+            </p>
+        </div>
+        <div class="home-desc">
+            <h2>
+                Can you sell with us?
+            </h2>
+            <p>
+                Of course, you can sell your products online through our website. If you have craft products and want to
+                sell your products through us, please visit the <a href="pages/sell.html"
+                    style="color: brown; font-weight: bold;">sell with us </a>page, where we will ask you for some
+                information to fill out with the form, and then the product will be displayed with the details on the
+                products page.
+            </p>
+        </div>
+        <div class="home-desc">
+            <h2>
+                who are we?
+            </h2>
+            <p>
+                We are software developers who decided to use our programming skills to help charities in our community
+                to market their local goods through the Internet, which will help them find a stable source of income to
+                develop their community businesses. If you are curious to know us personally you can visit our<a
+                    href="pages/about_us.html" style="color: brown; font-weight: bold;"> team
+                    page.</a>
             </p>
         </div>
         <div class="circular">
-            <img src="img/products/p-0-b.jpg" alt="">
-            <img src="img/products/p-1-b.jpg" alt="">
-            <img src="img/products/p-2-b.jpg" alt="">
+            <img src="img/badge/badge1.png" alt="">
+            <img src="img/badge/badge2.png" alt="">
+            <img src="img/badge/badge3.png" alt="">
+            <img src="img/badge/badge4.png" alt="">
         </div>
-        <fieldset id="feedBackCont" style="font-family: cursive; font :bold"><legend>Feedback Area</legend>
+        <fieldset id="feedBackCont" style="font-family: cursive; font :bold">
+            <legend>Feedback Area</legend>
             <div>
             <form action="" id="givingFeed">
                 <label for="feedback">  </label><br>
@@ -138,61 +177,65 @@
      </fieldset>
     </main>
     <hr>
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h6>About</h6>
-                    <p class="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative to help the
-                        upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or
-                        snippets as the code wants to be simple. We will help programmers build up concepts in different
-                        programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android,
-                        SQL and Algorithm.</p>
-                </div>
+    <footer class="footer-distributed">
 
-                <div class="col-xs-6 col-md-3">
-                    <h6>Categories</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
-                        <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
-                        <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
-                        <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
-                        <li><a href="http://scanfcode.com/category/android/">Android</a></li>
-                        <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
-                    </ul>
-                </div>
+        <div class="footer-left">
 
-                <div class="col-xs-6 col-md-3">
-                    <h6>Quick Links</h6>
-                    <ul class="footer-links">
-                        <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                        <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                        <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-                    </ul>
-                </div>
-            </div>
-            <hr>
+            <h3 id="iDeal-footer" onclick="window.location.href='index.html'">i<span>Deal</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                ·
+                <a href="../pages/products.html">Products</a>
+                ·
+                <a href="../pages/sell.html">Sell with us</a>
+                ·
+                <a href="../pages/about_us.html">About Us</a>
+                ·
+                <a href="../pages/cart.html">Cart</a>
+            </p>
+
+            <p class="footer-company-name">iDeal &copy; 2021</p>
         </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
-                        <a href="#">Scanfcode</a>.
-                    </p>
-                </div>
 
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-                    </ul>
-                </div>
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Amman, Jordan</p>
             </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+96277777776</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:iDeal@gmail.com">iDeal@gmail.com</a></p>
+            </div>
+
         </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the Site</span>
+                iDeal is an organization &amp; online marketing website which is aiming to improve the handcraft
+                community.
+            </p>
+
+            <div class="footer-icons">
+
+                <a id="fb" href="#"><i class="fa fa-facebook"></i></a>
+                <a id="twittwe" href="#"><i class="fa fa-twitter"></i></a>
+                <a id="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                <a id="github" href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
     </footer>
     <script>
         var slideIndex = 1;
@@ -226,8 +269,8 @@
             dots[slideIndex - 1].className += " active";
         }
     </script>
-    <script src="js/rating.js"></script>
     <script src="js/feed.js"></script>
+    <script src="js/rating.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,7 @@ body {
 }
 
 .mySlides {
-    display: none
+    display: none;
 }
 
 img {
@@ -17,15 +17,15 @@ img {
 }
 
 
-/* Slideshow container */
-
 .slideshow-container {
     max-width: 1000px;
     position: relative;
-    float: left;
+    margin: 35px auto;
 }
 
-
+.mySlides img{
+    border-radius: 80%;
+}
 /* Next & previous buttons */
 
 .prev,
@@ -47,9 +47,11 @@ img {
 
 
 /* Position the "next button" to the right */
-
+.prev{
+    left: 50px;
+}
 .next {
-    right: 0;
+    right: 20px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -72,6 +74,7 @@ img {
     bottom: 8px;
     width: 100%;
     text-align: center;
+    margin-bottom: 79px;
 }
 
 
