@@ -213,7 +213,9 @@ h1 span {
     -webkit-text-fill-color: transparent;
   }
   
-
+sup{
+    color: white;
+}
 
   @keyframes blinker {
     60% {

@@ -83,19 +83,17 @@ fieldset{
     margin: auto;
 }
 form{
-    opacity: 0;
     width: 40%;
     height: 300px;
     margin: auto;
 }
 
 #invoice{
-    opacity: 0;
     margin-top: 50px;
 }
 
 #form-inputs{
-    width: 50%;
+    width: 70%;
     margin: auto;
 }
 
@@ -106,6 +104,7 @@ form{
 
 form input{
     margin-bottom: 25px;
+    
 }
 
 body {
@@ -114,12 +113,6 @@ body {
     height: 100vh;
   }
   
-  h1 {
-    text-align: center;
-    font-family: Tahoma, Arial, sans-serif;
-    color: #06D85F;
-    margin: 80px 0;
-  }
   
   .box {
     width: 100%;
@@ -132,21 +125,9 @@ body {
     text-align: center;
   }
   
-  .button {
-    font-size: 1em;
-    padding: 10px;
-    color: #fff;
-    border: 2px solid #06D85F;
-    border-radius: 20px/50px;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease-out;
-  }
-  .button:hover {
-    background: #06D85F;
-  }
-  
-  .overlay {
+
+ 
+   .overlay {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -156,7 +137,7 @@ body {
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
-  }
+  } 
   .overlay:target {
     visibility: visible;
     opacity: 1;
@@ -203,3 +184,37 @@ body {
       width: 70%;
     }
   }
+/* 
+  #popup1{
+    display: block;
+  } */
+
+input[type = 'submit'] {
+    font-size: 1em;
+    padding: 10px;
+    color: rgb(23, 41, 28);
+    border: 2px solid #52527a;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+  input[type = 'submit']:hover{
+  background: #52527a;
+  color: white;
+}
+
+form{
+  width: 500px;
+  margin: 70px auto;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 8px 9px 0px 2px rgba(11, 44, 24, 0.39);
+  background-color:  #ccd4cab6;
+  border-radius: 27px;
+  height: 350px;
+}
+
+fieldset{
+  height: 340px;
+}

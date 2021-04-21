@@ -71,12 +71,11 @@
                 </th>
             </tr>
         </table>
-        <button id="invoiceBtn" onclick="showInvoice()">Procceed to Checkout</button>
         <div id="cart-product">
 
         </div>
         
-        <form action="" id="cart-form">
+        <form action="" id="cart-form" >
             <fieldset>
                 <legend>
                     Buy now
@@ -103,21 +102,16 @@
                     <input type="radio" id="paypal" value="paypal" name="payment">
                     <label for="paypal"><i class="fa fa-paypal " aria-hidden="true"
                         style="color: #003087;"></i>PayPal</label><br>
-
                     <input type="submit" value="Confirm" class="submitter">
                 </div>
                 </div>
             </fieldset>
         </form>
-        <h1>Popup/Modal Windows without JavaScript</h1>
-<div class="box">
-	<a class="button" href="#popup1">Let me Pop up</a>
-</div>
 
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<h2>Purchase Invoice</h2>
-		<a class="close" href="#">&times;</a>
+		<a class="close" href="#" onclick="hide()">&times;</a>
 		<div class="content">
 			<table id="invoice">
                 <tr>
@@ -142,7 +136,7 @@
                     </th>
                 </tr>
             </table>
-            <div id="print"><button onClick="window.print()">Print Invoice
+            <div id="print"><button onclick="window.print()">Print Invoice
             </button></div>
 		</div>
 	</div>
