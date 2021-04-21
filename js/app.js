@@ -119,7 +119,10 @@ getProducts();
 // cartRendering();
 
 
-
+function hide(){
+    document.getElementsByClassName('overlay')[0].style.opacity = '0';
+    document.getElementsByClassName('overlay')[0].style.visibility = 'hidden';
+}
 let purchaseForm = document.getElementById('cart-form');
 purchaseForm.addEventListener('submit', createInvoice);
 let fullName = '';
@@ -137,9 +140,12 @@ function createInvoice(event) {
     payPal = event.target['paypal'].checked;
     cash = event.target['cash'].checked;
     visa = event.target['visa'].checked;
-    swal('Thank you', 'The purchase was completed successfully');
+    // swal('Thank you', 'The purchase was completed successfully');
     document.getElementById('purchases-table').style.opacity = '0';
-    document.getElementById('invoiceBtn').style.opacity = '0';
+    document.getElementsByClassName('overlay')[0].style.opacity = '1';
+    document.getElementsByClassName('overlay')[0].style.visibility = 'visible';
+
+
     renderInvoice();
 }
 
