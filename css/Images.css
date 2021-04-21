@@ -102,13 +102,13 @@ label{
     font-size: 1em;
     padding: 10px;
     color: rgb(23, 41, 28);
-    border: 2px solid #13532e;
+    border: 2px solid #52527a;
     border-radius: 20px/50px;
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
   }
   .style-botton:hover {
-    background: #34493c;
-    color: rgb(169, 199, 184);
+    background: #52527a;
+    color: white;
   }
