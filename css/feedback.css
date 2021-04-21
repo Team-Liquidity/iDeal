@@ -13,7 +13,7 @@ width: 40%;
 #feedBackCont {
     display: inline-block;
     width: 100%;
-    background-image: url(../img/aboutus/Download-Geometric-Grey-Wallpaper.jpg);
+    background-image: url(../img/feed/feedback.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: padding-box;
@@ -45,7 +45,6 @@ fieldset legend {
     height: 37px;
     font-size: 25px;
     font-weight:bold;
-    /* box-shadow:5px 5px 2px 1px rgba(37, 129, 72, 0.39) ; */
 }
 
 fieldset legend:hover {
