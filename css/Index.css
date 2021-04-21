@@ -8,16 +8,27 @@ form{
 }
 .circular img{
     box-sizing: border-box;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    margin-right: 61px;
     border-radius: 100%;
-    background-color: yellow;
 }
 .circular {
     clear: both;
     word-wrap: break-word;
-    border-radius: 100%;
-    width: 25%;
-    height: 300px;
+    width: 69.95%;
+    height: 250px;
+    margin:auto;
 background-color: white;
+}
+
+.home-desc {
+    float: right;
+    width: 30%;
+    margin-bottom: 100px;
+}
+
+.circular img:hover{
+    /* background-color: yellow; */
+    border : 1px solid black;
 }

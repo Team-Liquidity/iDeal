@@ -11,9 +11,10 @@ width: 40%;
 } */
 
 #feedBackCont {
+    box-sizing: border-box;
     display: inline-block;
-    width: 100%;
-    background-color: #c4cedf66e;
+    width: 60%;
+    margin-left: 50px;
 }
 
 #feedBack {
@@ -23,7 +24,7 @@ width: 40%;
     border-radius: 8px;
     box-shadow: 5px 5px 2px 1px rgba(37, 129, 72, 0.39);
     margin: auto;
-    height: 372px;
+    height: 390px;
 }
 
 

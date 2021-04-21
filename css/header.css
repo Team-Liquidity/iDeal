@@ -212,7 +212,7 @@ h1 {
   font-size: 140px;
     clear: both;
     width: 35%;
-    height: 70%;
+    height: 60%;
     margin: auto;
     padding-top: 200px;
     text-align: center;
@@ -238,12 +238,14 @@ h1 span {
     height: 100px;
     float: right;
 }
-.cart{
-    float: right;
-}
+
   @keyframes blinker {
     60% {
     opacity: 0;
+    }
+
+    100%{
+        text-indent: 30%;
     }
 }
 
@@ -272,7 +274,14 @@ h1 span {
 {
   color: rgb(102, 198, 236);
 }
+nav p{
+    text-align: center;
+    color: rgba(229,233,177,1) ;
+}
 
+a{
+    text-decoration: none;
+}
 
 #menuToggle input
 {
@@ -367,4 +376,8 @@ h1 span {
 #menuToggle input:checked ~ ul
 {
   transform: none;
+}
+
+li{
+    list-style-type: none;
 }

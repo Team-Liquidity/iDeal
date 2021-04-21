@@ -137,7 +137,9 @@ function createInvoice(event) {
     payPal = event.target['paypal'].checked;
     cash = event.target['cash'].checked;
     visa = event.target['visa'].checked;
-    swal('Thank you', 'The purchase was completed successfully')
+    swal('Thank you', 'The purchase was completed successfully');
+    document.getElementById('purchases-table').style.opacity = '0';
+    document.getElementById('invoiceBtn').style.opacity = '0';
     renderInvoice();
 }
 
