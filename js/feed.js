@@ -8,10 +8,13 @@ let feedbacks = [];
 let container = document.getElementById('slideShow');
 function feedSubmiter(event) {
     event.preventDefault();
+    // let icone = document.createElement('i');
     let userName = document.createElement('h2');
     let feedBack = document.createElement('p');
     container.appendChild(userName);
+    // userName.appendChild(icone);
     container.appendChild(feedBack);
+  // icone.textContent= '${<i class="fa fa-user-circle-o" aria-hidden="true"></i>}';
     userName.textContent = event.target[0].value;
     feedBack.textContent = event.target[1].value;
         if(event.target[2].checked === true){
@@ -43,7 +46,10 @@ function feedSubmiter(event) {
     console.log('userName',userName);
     console.log('feedBack',feedBack);
     localStorage.setItem('userName', JSON.stringify(feedbacks));
+    
   }
+    
+  
   function getFeed() {
     let objArr =localStorage.getItem('userName');
     let nameArr =JSON.parse(objArr);
@@ -51,7 +57,7 @@ function feedSubmiter(event) {
     let rateArr = JSON.parse(rateString);
     console.log(nameArr);
     if(nameArr ){
-      for(let i = 0; i < nameArr.length; i++){
+      for(let i = 0; i < nameArr.length; i++){    
         let userName = document.createElement('h2');
         let feedBack = document.createElement('p');
         let ratingElement = document.createElement('p');
@@ -68,4 +74,4 @@ function feedSubmiter(event) {
   }
   return nameArr;
   }
-  getFeed()
+  getFeed();

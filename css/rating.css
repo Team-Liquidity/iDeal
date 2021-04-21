@@ -12,12 +12,16 @@
 }
 .rate:not(:checked) > label {
     float:right;
-    width: 30px;;
+    width:3em;
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    font-size:40px;
-    color: #141220;
+    font-size:20px;
+    color: #eff1f0;
+    position: relative;
+    left: -275px;   
+    top: 30px;
+
 }
 .rate:not(:checked) > label:before {
     content: '★';
