@@ -176,9 +176,10 @@ body hr {
 
 
 nav {
+    z-index: 0;
     width: 100%;
     height: 600px;
-    background-image: url(/img/nav.jpg);
+    background-image: url(/img/nav.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
@@ -212,18 +213,14 @@ h1 span {
     -webkit-text-fill-color: transparent;
   }
   
-  nav img {
-    width: 100px;
-    height: 100px;
-    float: right;
-}
+
 
   @keyframes blinker {
     60% {
     opacity: 0;
     }
 
-    100%{
+    50%{
         text-indent: 30%;
     }
 }
@@ -232,11 +229,10 @@ h1 span {
 {
   display: block;
   position: relative;
-  top: 50px;
+  top: 40px;
   left: 50px;
   float: left;
   z-index: 1;
-  
   -webkit-user-select: none;
   user-select: none;
 }
@@ -334,9 +330,10 @@ a{
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  
-  background: #ededed;
+  opacity: 0.7;
+background-image: linear-gradient( 177.9deg,  rgba(58,62,88,1) 3.6%, rgba(119,127,148,1) 105.8% );
   list-style-type: none;
+  height: 460px;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
   
@@ -351,6 +348,11 @@ a{
   padding: 10px 0;
   font-size: 22px;
 }
+#menu a{
+    color: white ;
+    font-weight: bold;
+}
+
 
 #menuToggle input:checked ~ ul
 {
@@ -359,4 +361,26 @@ a{
 
 li{
     list-style-type: none;
+}
+
+.nav{
+    height: 100px;
+    background-image: linear-gradient( 177.9deg,  rgba(58,62,88,1) 3.6%, rgba(119,127,148,1) 105.8% );
+}
+
+.nav h2{
+    font-family: 'Handlee', cursive;
+    color: white;
+    font-size: xx-large;
+    opacity: 0.7;
+    margin-top: 30px;
+    margin-right: 15px;
+    width: 200px;
+    height: 50px;
+    float: right;
+}
+
+ul.cart{
+    padding: 0;
+    margin-top: 20px;
 }
