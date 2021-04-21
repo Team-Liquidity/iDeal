@@ -42,6 +42,7 @@ body {
   
  .footer-distributed h3 span{
   color:  #5383d3;
+  font-family: font-family: 'Handlee', cursive;
  }
   
   
@@ -113,10 +114,11 @@ body {
   
  .footer-distributed .footer-company-about{
   line-height: 20px;
-  color:  #92999f;
+  color:  #fdfdfd;
   font-size: 13px;
   font-weight: normal;
   margin: 0;
+  font-family: 'Handlee', cursive;
  }
   
  .footer-distributed .footer-company-about span{
