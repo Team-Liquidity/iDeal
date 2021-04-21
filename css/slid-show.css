@@ -9,9 +9,7 @@ body {
 }
 
 .mySlides {
-    margin-top: 50px;
     display: none;
-    margin-left: 20px;
 }
 
 img {
@@ -22,7 +20,7 @@ img {
 .slideshow-container {
     max-width: 1000px;
     position: relative;
-    float: left;
+    margin: 35px auto;
 }
 
 .mySlides img{

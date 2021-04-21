@@ -109,10 +109,17 @@
                 </div>
             </fieldset>
         </form>
+        <h1>Popup/Modal Windows without JavaScript</h1>
+<div class="box">
+	<a class="button" href="#popup1">Let me Pop up</a>
+</div>
 
-        <div id="table-product">
-            
-            <table id="invoice">
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Here i am</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<table id="invoice">
                 <tr>
                     
                     <th>
@@ -134,7 +141,13 @@
                         Payment Method
                     </th>
                 </tr>
-            </table></div>
+            </table>
+		</div>
+	</div>
+</div>
+        <div id="table-product">
+            
+            </div>
 
             <div id="print"><button onClick="window.print()">Print Invoice
             </button></div>
