@@ -1,3 +1,7 @@
+body{
+    
+}
+
 form{
     width: 30%;
     float: left;
@@ -23,12 +27,16 @@ background-color: white;
 }
 
 .home-desc {
-    float: right;
     width: 30%;
     margin-bottom: 100px;
+    display: inline-block;
+    margin-right: 45px;
+    line-height: 2;
+    text-indent: 30px;
 }
 
 .circular img:hover{
     /* background-color: yellow; */
     border : 1px solid black;
 }
+
