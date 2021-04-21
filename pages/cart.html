@@ -20,7 +20,7 @@
 <body>
     <header>
         <nav role="navigation">
-            <img src="img/logo.png" alt="" class="logo">
+            <img src="img/logo.png" alt="" class="logo" onclick="window.location.href='../index.html'">
             <div id="menuToggle">
                 <input type="checkbox" />
 
@@ -109,10 +109,17 @@
                 </div>
             </fieldset>
         </form>
+        <h1>Popup/Modal Windows without JavaScript</h1>
+<div class="box">
+	<a class="button" href="#popup1">Let me Pop up</a>
+</div>
 
-        <div id="table-product">
-            
-            <table id="invoice">
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Purchase Invoice</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<table id="invoice">
                 <tr>
                     
                     <th>
@@ -134,10 +141,15 @@
                         Payment Method
                     </th>
                 </tr>
-            </table></div>
-
+            </table>
             <div id="print"><button onClick="window.print()">Print Invoice
             </button></div>
+		</div>
+	</div>
+</div>
+        <div id="table-product">
+            
+            </div>
 
     </main>
     <hr>
@@ -145,18 +157,18 @@
 
         <div class="footer-left">
 
-            <h3>i<span>Deal</span></h3>
+            <h3 id="iDeal-footer" onclick="window.location.href='../index.html'">i<span>Deal</span></h3>
 
             <p class="footer-links">
-                <a href="#">Home</a>
+                <a href="../index.html">Home</a>
                 ·
-                <a href="#">Products</a>
+                <a href="../pages/products.html">Products</a>
                 ·
-                <a href="#">Sell with us</a>
+                <a href="../pages/sell.html">Sell with us</a>
                 ·
-                <a href="#">About Us</a>
+                <a href="../pages/about_us.html">About Us</a>
                 ·
-                <a href="#">Cart</a>
+                <a href="cart.html">Cart</a>
             </p>
 
             <p class="footer-company-name">iDeal &copy; 2021</p>
@@ -190,10 +202,10 @@
 
             <div class="footer-icons">
 
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
+                <a id="fb" href="#"><i class="fa fa-facebook" ></i></a>
+                <a id="twittwe" href="#"><i class="fa fa-twitter"></i></a>
+                <a id="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                <a id="github" href="#"><i class="fa fa-github"></i></a>
 
             </div>
 

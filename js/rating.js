@@ -1,4 +1,3 @@
-
 let st5 = document.getElementById('star5');
 let st4 = document.getElementById('star4');
 let st3 = document.getElementById('star3');
