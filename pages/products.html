@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/Images.css">
+    <link rel="stylesheet" href="../css/page-header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="../img/duck.png" type="image/png">
     <script src="https://kit.fontawesome.com/2a1cc42354.js" crossorigin="anonymous"></script>
@@ -18,49 +18,40 @@
 
 <body>
     <header>
-        <nav>
-            <img src="../img/logo.png" alt="" class="logo">
+        <nav role="navigation">
+            <img src="img/logo.png" alt="" class="logo">
+            <div id="menuToggle">
+                <input type="checkbox" />
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li><br>
+                    <li>
+                        <a href="#">Products</a>
+                    </li>
+                    <li>
+                        <a href="sell.html">Sell With Us</a>
+                    </li>
+                    <li>
+                        <a href="about_us.html">About Us</a>
+                    </li>
+                    </a>
+                </ul>
+
+            </div>
             <ul class="cart">
                 <li>
-                    <a href="cart.html">Cart<sup class="total"></sup></a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart fa-2x"
+                            style="color: rgba(223,205,187,1);"></i> <sup class="total"></sup></a>
                 </li>
             </ul>
-            <ul class="nav-bar">
-                <li>
-                    <a href="../index.html">Home</a>
-                </li>
-                <li>
-                    <a href="#">Products</a>
-                </li>
-                <li>
-                    <a href="sell.html">Sell With Us</a>
-                </li>
-                <li>
-                    <a href="about_us.html">About Us</a>
-                </li>
-            </ul>
-            <h1>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span class="letter">i</span> Deal
-            </h1>
-            <div class="mouse_scroll">
-
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <div>
-                    <span class="m_scroll_arrows unu"></span>
-                    <span class="m_scroll_arrows doi"></span>
-                    <span class="m_scroll_arrows trei"></span>
-                </div>
-            </div>
         </nav>
     </header>
-    <hr>
-
     <main id="img-main">
 
         <div id="img-container">
@@ -427,48 +418,65 @@
 
         <hr>
     </main>
-    <footer class="site-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <h6>About</h6>
-              <p class="text-justify">iDeal.com <i>PURCHASE LOCAL PRODUCT</i> We offer you many options for home products at an acceptable price, as you can shop products made by charities and professional individuats for this industry.</p>
-            </div>
-  
-           
-  
-            <div class="col-xs-6 col-md-3">
-              <h6>Quick Links</h6>
-              <ul class="footer-links">
-                <li><a href="http://scanfcode.com/about/">About Us</a></li>
-                <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-                <li><a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a></li>
-                <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-                <li><a href="http://scanfcode.com/sitemap/">Sitemap</a></li>
-              </ul>
-            </div>
-          </div>
-          <hr>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>i<span>Deal</span></h3>
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                ·
+                <a href="#">Products</a>
+                ·
+                <a href="#">Sell with us</a>
+                ·
+                <a href="#">About Us</a>
+                ·
+                <a href="#">Cart</a>
+            </p>
+
+            <p class="footer-company-name">iDeal &copy; 2021</p>
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-md-8 col-sm-6 col-xs-12">
-              <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by 
-           <a href="#">iDeal</a>.
-              </p>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p>Amman, Jordan</p>
             </div>
-  
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <ul class="social-icons">
-                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
-              </ul>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+96277777776</p>
             </div>
-          </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:iDeal@gmail.com">iDeal@gmail.com</a></p>
+            </div>
+
         </div>
-  </footer>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the Site</span>
+                iDeal is an organization &amp; online marketing website which is aiming to improve the handcraft community.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
     <script src="../js/added.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/added.js"></script>

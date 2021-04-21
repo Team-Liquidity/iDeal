@@ -29,6 +29,7 @@
 // getProducts();
 // cartRendering(); 
 // renderTable();
+let flag = true;
 
 let ourProducts = localStorage.getItem('products');
 let imgProducts = JSON.parse(ourProducts);
@@ -40,25 +41,29 @@ function cartRendering() {
     let productsString = localStorage.getItem('products');
     let products = JSON.parse(productsString);
     console.log(products);
-    for (let i = 0 ; i < products.length ; i++){
-    for(let i = 0 ; i < products[i].length ; i++) {
-        let tableRow = productsEl.appendChild(document.createElement('tr'));
-    let productImage = document.createElement('img');
-    let tableDataImg = tableRow.appendChild(document.createElement('td'));
-    tableDataImg.appendChild(productImage);
-    productImage.setAttribute('src' , products[i][0]);
-    productImage.setAttribute('width' , '100px');
-    productImage.setAttribute('height' , '100px');
-    let tableDataPrice = tableRow.appendChild(document.createElement('td'));
-    tableDataPrice.textContent = products[i][2] + ' JOD';
-    let tableDataQuantity = tableRow.appendChild(document.createElement('td'));
-    tableDataQuantity.textContent = products[i][1] + ' Product/s';
-    quantityTotal += parseInt(products[i][1]);
-    let tableDataTotal = tableRow.appendChild(document.createElement('td'));
-    tableDataTotal.textContent = products[i][3] + ' JOD' ;
-    priceTotal += parseInt(products[i][3]);
-}
+    for (let i = 0; i < products.length; i++) {
+        for (let i = 0; i < products[i].length; i++) {
+            let tableRow = productsEl.appendChild(document.createElement('tr'));
+            let productImage = document.createElement('img');
+            let tableDataImg = tableRow.appendChild(document.createElement('td'));
+            tableDataImg.appendChild(productImage);
+            productImage.setAttribute('src', products[i][0]);
+            productImage.setAttribute('width', '100px');
+            productImage.setAttribute('height', '100px');
+            let tableDataPrice = tableRow.appendChild(document.createElement('td'));
+            tableDataPrice.textContent = products[i][2] + ' JOD';
+            let tableDataQuantity = tableRow.appendChild(document.createElement('td'));
+            tableDataQuantity.textContent = products[i][1] + ' Product/s';
+            quantityTotal += parseInt(products[i][1]);
+            let tableDataTotal = tableRow.appendChild(document.createElement('td'));
+            tableDataTotal.textContent = products[i][3] + ' JOD';
+            priceTotal += parseInt(products[i][3]);
+
+        }
+        localStorage.removeItem('products');
+
     }
+
 
 }
 
@@ -81,3 +86,20 @@ cartRendering();
 //         priceArr = stringObj2;
 //     }
 // }
+function showInvoice() {
+    let form = document.getElementById('cart-form');
+    let tableInvoice = document.getElementById('invoice');
+    console.log(flag)
+    if(flag){
+    form.style.opacity = '1';
+    tableInvoice.style.opacity = '1';
+    flag = false;
+    alert('Fill your information Please')
+}
+
+    else{
+        form.style.opacity = '0';
+        tableInvoice.style.opacity = '0';
+        flag = true;
+    }
+}
