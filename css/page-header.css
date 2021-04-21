@@ -123,8 +123,10 @@ li{
     list-style-type: none;
 }
 nav{
-    height :100px;
-    background-image: url(/../img/nav.jpg);
+  height: 100px;
+  background-image: linear-gradient( 
+177.9deg
+, rgba(58,62,88,1) 3.6%, rgba(119,127,148,1) 105.8% );
 }
 .cart{
     float: right;
