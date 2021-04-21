@@ -173,28 +173,7 @@ body hr {
 
 */
                                                 
-.swal-title {
-    margin: 0px;
-    font-size: 16px;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.26);
-    margin-bottom: 40px;
-}
 
-.swal-footer {
-    background-color: rgb(245, 248, 220);
-    margin-top: 32px;
-    border-top: 1px solid #E9EEF1;
-    overflow: hidden;
-}
-
-.swal-button {
-    padding: 7px 19px;
-    border-radius: 2px;
-    background-color: #4962B3;
-    font-size: 12px;
-    border: 1px solid #390279;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.37);
-}
 
 nav {
     width: 100%;
