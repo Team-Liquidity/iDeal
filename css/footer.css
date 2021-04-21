@@ -174,3 +174,23 @@ body {
   }
   
  }
+
+ .footer-icons #fb:hover{
+   background-color: rgb(0, 128, 255);
+ }
+.footer-icons #twittwe:hover{
+  background-color:white;
+  color:rgb(0, 128, 255) ;
+}
+.footer-icons #linkedin:hover{
+  background-color: rgba(10, 30, 103, 0.946);
+}
+.footer-icons #github:hover{
+  background-color: black;
+}
+#iDeal-footer{
+  cursor: pointer;
+}
+.logo{
+  cursor: pointer;
+}
