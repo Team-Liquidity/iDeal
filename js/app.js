@@ -29,10 +29,12 @@ for (let i = 0; i < addButton.length; i++) {
         pictArr.push(getPrice * getQuantity);
         productArr.push(pictArr);
         pictArr = [];
+        totalP += getQuantity*getPrice;
         updateStorage();
         if (getQuantity > 0) {
             swal('Done ', `You added ${getQuantity} products to the cart`)
         }
+        console.log(totalP);
 
     }
 
@@ -45,7 +47,6 @@ function updateStorage() {
     arrString = JSON.stringify(productArr);
     localStorage.setItem('products', arrString);
     localStorage.setItem('Quantity counter',counter);
-    totalP += totalPrice;
     localStorage.setItem('total', JSON.stringify(totalP));
 }
 
@@ -53,11 +54,17 @@ function updateStorage() {
 function getProducts() {
     let data = localStorage.getItem('products');
     let productsdata = JSON.parse(data);
-    if(totalPrice != 0) {
-        totalP += totalPrice
-    }
+    let priceTotal = localStorage.getItem('total');
+    let quantityTotal = localStorage.getItem('Quantity counter');
+    if(priceTotal !== null) {
+        totalP = parseInt(priceTotal);
+        }
     if (productsdata !== null) {
         productArr = productsdata;
+
+    }
+    if (quantityTotal !== null) {
+        counter = parseInt(quantityTotal);
 
     }
 
