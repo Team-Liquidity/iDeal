@@ -179,7 +179,7 @@ nav {
     z-index: 0;
     width: 100%;
     height: 600px;
-    background-image: url(/img/nav.jpeg);
+    background-image: url(img/nav.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     color: whitesmoke;
